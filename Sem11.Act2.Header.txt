@@ -1,0 +1,126 @@
+#pragma once
+#include "iostream"
+using namespace System;
+using namespace std;
+
+int menu()
+{
+	int op;
+	cout << endl << "\t\t MENU:";
+	cout << endl << "\t\t********";
+	cout << endl << "\t1.Generar notas";
+	cout << endl << "\t2.Listar las notas";
+	cout << endl << "\t3.Mostrar mayor nota";
+	cout << endl << "\t4.Mostrar menor nota";
+	cout << endl << "\t5.Mostrar nota promedio";
+	cout << endl << "\t6.Mostrar´porcentaje de aprobados y desaprobados";
+	cout << endl << "\t7. Ordenar de forma descendente";
+	cout << endl << "\tIngrese una opcion:";
+	cin >> op;
+	return op;
+}
+
+int * generar_notas(int * notas, int &N)
+{
+	
+	N = 1 + rand() % 7;
+
+	notas = new int[N];
+	for (int i = 0; i < N; i++)
+	{
+		notas[i] = 1 + rand() % 21;
+	}
+	return notas;
+}
+
+int listar_notas(int* notas, int & N)
+{
+	if (notas != nullptr)
+	{
+		for (int i = 0; i < N; i++)
+		{
+			cout << "Numero[" << i << "]: " << notas[i] << endl;
+		}
+	}
+	else
+	{
+		cout << "Aun no hay arreglo";
+	}
+	return N;
+}
+
+int mayor_nota(int* nota, int& N)
+{
+	int max_nota;
+	int indice_mayor = 0;
+	max_nota = nota[0];
+	for (int i = 0; i < N; i++)
+	{
+		max_nota = max(max_nota, nota[i]);
+		indice_mayor = i;
+	}
+
+	cout << "La maxima nota es: " << max_nota << endl;
+	cout << "Su posicion en el arreglo es: " << indice_mayor;
+	return indice_mayor;
+}
+
+int menor_nota(int* nota, int& N)
+{
+	int min_nota;
+	int indice_menor = 0;
+	min_nota = nota[0];
+	for (int i = 0; i < N; i++)
+	{
+		min_nota = min(min_nota, nota[i]);
+		if (nota[i] < nota[indice_menor])
+		{
+			indice_menor = i;
+		}
+
+	}
+
+	cout << "La minima nota es: " << min_nota << endl;
+	cout << "Su posicion en el arreglo es: " << indice_menor;
+	return indice_menor;
+}
+
+int mostrar_nota_promedio(int*notas, int& N)
+{
+	int suma_nota = 0;
+	for (int i = 0; i < N; i++)
+	{
+		suma_nota += notas[i];
+	}
+	cout << "La nota promedio es: " << suma_nota / N * 1.0 << endl;
+	return suma_nota;
+}
+ 
+
+void intercambiar(int&n1, int&n2)
+{
+	int aux;
+	aux = n1;
+	n1 = n2;
+	n2 = aux;
+}
+
+void odernar_descendente(int* arreglo, int& N)
+{
+	for (int i = 0; i < N - 1; i++)
+	{
+		for (int j = 0; j < N - i - 1; i++)
+		{
+			if (arreglo[j] < arreglo[j + 1])
+			{
+				intercambiar(arreglo[i], arreglo[j + 1]);
+			}
+		}
+	}
+	for (int i = 0; i < N; i++)
+	{
+		cout << "\t" << arreglo[i] << endl;
+	}
+
+
+}
