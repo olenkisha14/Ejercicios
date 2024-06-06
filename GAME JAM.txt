@@ -1,0 +1,669 @@
+#pragma once
+#pragma once
+#include "iostream"
+#include "conio.h"
+#include "thread" // para el cronómetro y temporizador
+#include "chrono" // para el cronómetro y temporizador
+using namespace System;
+using namespace std;
+using namespace std::this_thread;
+using namespace std::chrono;
+
+//TEMPORIZADOR
+int segundo_random()
+{
+    return 1 + rand() % 60;
+}
+
+int minutos_random()
+{
+    return 1 + rand() % 1;
+}
+
+bool temporizador()
+{
+    srand((time(nullptr)));
+    int segundo = 0;
+    int minuto = 0;
+    int hora = 0;
+    int fin = 0;
+
+    segundo = segundo_random();
+    minuto = minutos_random();
+
+    while (fin == 0)
+    {
+
+        Console::SetCursorPosition(37, 32);cout << "  Temporizador" << endl;
+        Console::SetCursorPosition(37, 33);cout << "  " << hora << ":" << minuto << ":" << segundo << endl;
+        sleep_for(seconds(1));//para que el buble duerma un segundo y de el efecto de aumento o disminución
+        segundo--;
+        if (minuto == 0 && segundo == 0 && hora == 0)
+        {
+            fin = 1;
+            break;
+        }
+
+        if (minuto == 0 && segundo == 0)
+        {
+            hora--;
+            minuto = 59;
+            segundo = 60;
+        }
+
+        if (segundo == (0))
+        {
+            minuto--;
+            segundo = 60;
+        }
+
+        //if (minuto == 0 && segundo == 0) 
+        //{
+        //    return true; // Fin del temporizador
+        //}
+
+        //if (segundo == 0)
+        //{
+        //    minuto--;
+        //    segundo = 60;
+        //}
+        if (_kbhit())
+        {
+            return true;
+            break;
+        }// Si se presiona una tecla, salir del temporizador
+    }
+    (void)_getch();
+    return true;
+}
+
+
+#pragma once
+#include "iostream"
+
+using namespace System;
+using namespace std;
+
+void cursor(int a, int b)
+{
+    Console::SetCursorPosition(a, b);
+}
+
+int menu()
+{
+    int opcion;
+    Console::ForegroundColor = ConsoleColor::White; cursor(1, 13); cout << endl << "\t1. PRESENTACION ";
+    Console::ForegroundColor = ConsoleColor::White; cout << endl << "\t2. REGLAS DEL JUEGO ";
+    Console::ForegroundColor = ConsoleColor::White; cout << endl << "\t3. INTRO ";
+    Console::ForegroundColor = ConsoleColor::White; cout << endl << "\t4. JUGAR";
+    Console::ForegroundColor = ConsoleColor::White; cout << endl << "\t5. RANKING";
+    Console::ForegroundColor = ConsoleColor::White; cout << endl << "\t6. CREDITOS";
+    Console::ForegroundColor = ConsoleColor::White; cout << endl << "\t7. GRACIAS POR JUGAR ";
+    Console::ForegroundColor = ConsoleColor::White; cout << endl << "\t Ingrese una opcion: ";
+    Console::ForegroundColor = ConsoleColor::White; cin >> opcion;
+
+    return opcion;
+}
+
+void presentacion()
+{
+    int x = 45, y = 1;
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y); cout << "               ______                         _            ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 1); cout << "              / ____/____   _____ ____ ___   (_)_____      ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 2); cout << "             / /    / __ \\ / ___// __ `__ \\ / // ___/      ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 3); cout << "            / /___ / /_/ /(__  )/ / / / / // // /__        ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 4); cout << "            \\____/ \\____//____//_/ /_/ /_//_/ \\___/        ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 5); cout << "        ____       __                                      ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 6); cout << "       / __ \\ ____/ /__  __ _____ _____ ___   __  __       ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 7); cout << "      / / / // __  // / / // ___// ___// _ \\ / / / /       ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 8); cout << "     / /_/ // /_/ // /_/ /(__  )(__  )/  __// /_/ /        ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 9); cout << "     \\____/ \\__,_/ \\__, //____//____/ \\___/ \\__, /         ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 10); cout << "                  /____/                   /____/          ";
+}
+
+void reglasdeljuego()
+{
+    int x = 45, y = 1;
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y); cout << "       ____                __                    __       __      _                              ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 1); cout << "      / __ \\ ___   ____ _ / /____ _ _____   ____/ /___   / /     (_)__  __ ___   ____ _ ____   _ ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 2); cout << "     / /_/ // _ \\ / __ `// // __ `// ___/  / __  // _ \\ / /     / // / / // _ \\ / __ `// __ \\ (_)";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 3); cout << "    / _, _//  __// /_/ // // /_/ /(__  )  / /_/ //  __// /     / // /_/ //  __// /_/ // /_/ /_   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 4); cout << "   /_/ |_| \\___/ \\__, //_/ \\__,_//____/   \\__,_/ \\___//_/   __/ / \\__,_/ \\___/ \\__, / \\____/(_)  ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 5); cout << "                /____/                                     /___/              /____/             ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 9); cout << "\t1. Cosmic Odyssey es un juego que simula el rescate de unos personajes que se encuentran";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 10); cout << "      en una zona insegura para trasladarlos a una zona segura en el menor tiempo posible.";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 11); cout << "\t2. La cantidad de naves en total es de 8 y al jugador se le asignara 3 de ellas de ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 12); cout << "      manera aleatoria para realizar el rescate.";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 13); cout << "\t3. Cada nave tendra una velocidad diferente y aleatoria.";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 14); cout << "\t4. Cada nave solo puede rescatar a un personaje a la vez y luego debe volver por el ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 15); cout << "      siguiente.";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 16); cout << "\t5. Hay 10 personajes a rescatar.";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 17); cout << "\t6. El rescate tiene un tiempo 't' segundos, el cual es aleatorio en el margen de 60 a";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 18); cout << "      120 segundos.";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 19); cout << "\t7. La nave de rescate que logre rescatar más personajes en el tiempo 't' gana.";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 20); cout << "\t8. Finalizado el rescate el programa pregunta si desea simular otro rescate. Si la";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 21); cout << "      respuesta es SI, entonces todo se reinicia y comienza otro rescate.";
+}
+
+void primnave()
+{
+    int x = 5, y = 1;
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y); cout << "    ____         _                                         ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 1); cout << "   / __ \\ _____ (_)____ ___   ___   _____ ____ _    ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 2); cout << "  / /_/ // ___// // __ `__ \\ / _ \\ / ___// __ `/  ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 3); cout << " / ____// /   / // / / / / //  __// /   / /_/ /    ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 4); cout << "/_/    /_/   /_//_/ /_/ /_/ \\___//_/    \\__,_/   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 5); cout << "                                                   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 6); cout << "        ____   ____ _ _   __ ___   _ ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 7); cout << "       / __ \\ / __ `/| | / // _ \\ (_)";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 8); cout << "      / / / // /_/ / | |/ //  __/_   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 9); cout << "     /_/ /_/ \\__,_/  |___/ \\___/(_)  ";
+}
+
+void segunnave()
+{
+    int x = 70, y = 1;
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y); cout << "   _____                                 __       ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 1); cout << "  / ___/ ___   ____ _ __  __ ____   ____/ /____ _ ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 2); cout << "  \\__ \\ / _ \\ / __ `// / / // __ \\ / __  // __ `/ ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 3); cout << " ___/ //  __// /_/ // /_/ // / / // /_/ // /_/ /  ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 4); cout << "/____/ \\___/ \\__, / \\__,_//_/ /_/ \\__,_/ \\__,_/   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 5); cout << "            /____/                                ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 6); cout << "                                                   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 7); cout << "         ____   ____ _ _   __ ___   _ ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 8); cout << "        / __ \\ / __ `/| | / // _ \\ (_)";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 9); cout << "       / / / // /_/ / | |/ //  __/_   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 10); cout << "      /_/ /_/ \\__,_/  |___/ \\___/(_)  ";
+}
+
+void tercnave()
+{
+    int x = 135, y = 1;
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y); cout << "  ______                                    ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 1); cout << " /_  __/___   _____ _____ ___   _____ ____ _";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 2); cout << "  / /  / _ \\ / ___// ___// _ \\ / ___// __ `/";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 3); cout << " / /  /  __// /   / /__ /  __// /   / /_/ / ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 4); cout << "/_/   \\___//_/    \\___/ \\___//_/    \\__,_/  ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 5); cout << "                                                   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 6); cout << "         ____   ____ _ _   __ ___   _ ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 7); cout << "        / __ \\ / __ `/| | / // _ \\ (_)";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 8); cout << "       / / / // /_/ / | |/ //  __/_   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 9); cout << "      /_/ /_/ \\__,_/  |___/ \\___/(_)  ";
+}
+
+void creditos()
+{
+    int x = 40, y = 2;
+
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 1); cout << "   ____  ____   _____  ____  ___  _____  ___   ____   ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 2); cout << "  / ___||  _ \\ | ____||  _ \\|_ _||_   _|/ _ \\ / ___| ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 3); cout << " | |    | |_) ||  _|  | | | || |   | | | | | |\\___ \\ ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 4); cout << " | |___ |  _ < | |___ | |_| || |   | | | |_| | ___) |  ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 5); cout << "  \\____||_| \\_\\|_____||____/|___|  |_|  \\___/ |____/ ";
+
+}
+void creditos_texto()
+{
+    int x = 30, y = 10;
+
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 1); cout << "           SPACE X: Elon Musk ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 3); cout << "           1. Del Aguila Del Aguila Olenka Priscilla " << endl;
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 4); cout << "           2. Vergaray Calderon Rose Almendra" << endl;
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 5); cout << "           3. Espinoza Cruz Angela Milagros" << endl;
+} 
+
+void ranking()
+{
+    int x = 40, y = 2;
+
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 1); cout << " .-------------------------------------.";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 2); cout << " | ____             _    _             | ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 3); cout << " ||  _ \\ __ _ _ __ | | _(_)_ __   __ _ |";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 4); cout << " || |_) / _` | '_ \\| |/ / | '_ \\ / _` ||";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 5); cout << " ||  _ < (_| | | | |   <| | | | | (_| || ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 6); cout << " ||_| \\_\\__,_|_| |_|_|\\_\\_|_| |_|\\__, ||";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 7); cout << " |                               |___/ | ";
+    Console::ForegroundColor = ConsoleColor::White; cursor(x, y + 8); cout << " '-------------------------------------'  ";
+
+}
+
+#pragma once
+#include "iostream"
+#include "conio.h"
+#include "panelControl.h"
+#include "Header.h"
+using namespace System;
+using namespace std;
+
+
+
+void cursor3(int x, int y)
+{
+    Console::SetCursorPosition(x, y);
+}
+
+void nave1_1()
+{
+    int x = 7, y = 1;
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y); cout << "        /\\";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 1); cout << "       /  \\";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 2); cout << "      /    \\";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 3); cout << "     |      |";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 4); cout << "     |      |";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 5); cout << "     |  ()  |";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 6); cout << "     |      |";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 7); cout << "     |      |";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 8); cout << "     |  ()  |";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 9); cout << "     |      |";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 10); cout << "   __|      |__";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 11); cout << "  | /\\      /\\ |";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 12); cout << "  |/::\\    /::\\|";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 13); cout << " /     |##|     \\";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 14); cout << "/______|##|______\\";
+    Console::ForegroundColor = ConsoleColor::DarkMagenta; cursor3(x, y + 15); cout << "  |____|  |____|";
+}
+
+void nave1_horizontal()
+{
+    int x = 1, y = 6;
+
+    cursor(x, y); cout << "   ./:-:====";
+    cursor(x, y + 1); cout << "-=.--..::=:------";
+    cursor(x, y + 2); cout << "   =|*:      .=-. -=";
+    cursor(x, y + 3); cout << "-=.--..::=:------";
+    cursor(x, y + 4); cout << "   .\\:-:====";
+}
+
+
+
+void movimiento_nave1_horizontal()
+{
+    int x = 1, y = 6, dx = 1, dy = 0;
+    int puntos = 0;
+    cout << "Pulse alguna tecla para empezar la animacion" << endl;
+    system("pause>0");
+    int repeticiones = 0;
+
+    //Definir velocidad random de sleep
+    int sleep_velocidad = 0;
+
+    bool fin_temporizador = false;
+
+    // Inicializar temporizador en un hilo aparte
+    
+    thread temporizador_thread(temporizador);
+    
+    while (/*!fin_temporizador*/true)
+    {
+        system("cls");
+
+        int velocidad = generar_velocidad_aleatoria();
+        int sleep_velocidad = calcular_sleep_velocidad(velocidad);
+
+        // Mostrar la velocidad antes de dibujar la nave
+        cursor(1, 38); imprimir_velocidad(velocidad);
+
+
+
+        for (int i = 0; i < 4; ++i)
+        {
+            nave1_horizontal(); // Dibuja la figura al inicio de cada repetición
+            //controla la nave
+            bool diagonal = false;
+            bool horizontal_2 = false;
+            bool vertical_abajo = false;
+
+            while (!fin_temporizador && !(_kbhit()))
+            {
+                system("cls");
+
+                //borrar              
+                cursor(x, y); cout << "             ";
+                cursor(x, y + 1); cout << "                  ";
+                cursor(x, y + 2); cout << "                     ";
+                cursor(x, y + 3); cout << "                  ";
+                cursor(x, y + 4); cout << "             ";
+
+                // Si la figura toca el borde derecho, desaparece y vuelve a la posición inicial
+                if (x == 105)
+                {
+                    puntos++;
+                    break;
+                }
+
+                if (x == 30 && !vertical_abajo)
+                {
+                    vertical_abajo = true;
+                    dy = 1;
+                    dx = 0;
+                                                                                        
+
+
+                }
+
+                else if (y == 20 && !diagonal) //para que vaya en diagonal hacia arriba
+                {
+                    diagonal = true;
+                    dy = -1;
+                    dx = 1;
+
+                }
+                else if (diagonal && y == 5) //para que pare la diagonal y vaya horizontal
+                {
+                    diagonal = false;
+                    horizontal_2 = true;
+                    dx = 1;
+                    dy = 0;
+                }
+
+                if (x > 119 || x < 1) dx = dx * -1;
+                if (y > 38 || y < 1) dy = dy * -1;
+
+                y = y + dy;
+                x = x + dx;
+
+
+                // Dibujar la figura
+                cursor(x, y); cout << "   ./:-:====";
+                cursor(x, y + 1); cout << "-=.--..::=:------";
+                cursor(x, y + 2); cout << "   =|*:      .=-. -=";
+                cursor(x, y + 3); cout << "-=.--..::=:------";
+                cursor(x, y + 4); cout << "   .\\:-:====";
+
+
+
+                cursor(1, 30);imprimir_velocidad(velocidad);//para que aparezca la velocidad, sin esto, la animacion lo borra
+
+                _sleep(sleep_velocidad);
+                cursor(1, 38);
+
+            }
+            if (/*fin_temporizador ||*/ _kbhit()) break;
+            // Restablecer las variables para la proxima repeticion al principio
+            x = 1;
+            y = 6;
+            dx = 1;
+            dy = 0;
+            
+        }
+
+        if (fin_temporizador || _kbhit()) break;
+    }
+    system("cls");
+    cout << "Juego terminado." << endl;
+    temporizador_thread.join();
+     // Mostrar los puntos al final del juego
+    cout << "Civiles rescatados: " << puntos << endl;
+    system("pause>0");
+    // asegurando que el hilo principal espere a que otro hilo termine antes de continuar
+}
+
+#pragma once
+#include "iostream"
+#include "conio.h"
+#include "panelControl.h"
+using namespace System;
+using namespace std;
+
+void cursor4(int x, int y)
+{
+    Console::SetCursorPosition(x, y);
+}
+
+void movimiento_meteorito()
+{
+    int x = 28, y = 3, dx = 1, dy = 1;
+    cursor4(x, y); cout << " O O";
+    cursor4(x, y + 1); cout << "O O O";
+    cursor4(x, y + 2); cout << " O O";
+
+    while (true)
+    {
+        //borrar 
+        cursor4(x, y); cout << "    ";
+        cursor4(x, y + 1); cout << "     ";
+        cursor4(x, y + 2); cout << "    ";
+
+        if (x > 119 || x < 1) dx = dx * -1;
+        if (y > 38 || y < 1) dy = dy * -1;
+
+        y = y + dy;
+        x = x + dx;
+
+        if (y == 30)
+        {
+            cout << "BOOM!!";
+            Console::ForegroundColor = ConsoleColor::Red; cursor(x, y); cout << "  ____   ____   ____  __  __ _ ";
+            Console::ForegroundColor = ConsoleColor::Red; cursor(x, y + 1); cout << " |  _ \\ / __ \\ / __ \\|  \\/  | |";
+            Console::ForegroundColor = ConsoleColor::Red; cursor(x, y + 2); cout << " | |_) | |  | | |  | | \\  / | |";
+            Console::ForegroundColor = ConsoleColor::Red; cursor(x, y + 3); cout << " |  _ <| |  | | |  | | |\\/| | | ";
+            Console::ForegroundColor = ConsoleColor::Red; cursor(x, y + 4); cout << " | |_) | |__| | |__| | |  | |_|";
+            Console::ForegroundColor = ConsoleColor::Red; cursor(x, y + 5); cout << " |____/ \\____/ \\____/|_|  |_(_) ";
+
+          
+            system("pause>0");
+            break;
+        }
+
+        //dibujar
+        cursor4(x, y); cout << " O O";
+        cursor4(x, y + 1); cout << "O O O";
+        cursor4(x, y + 2); cout << " O O";
+        _sleep(100);
+    }
+}
+
+#pragma once
+#include "iostream"
+#include "conio.h"
+#include "escenarios.h"
+using namespace System;
+using namespace std;
+//VELOCIDAD
+
+void imprimir_velocidad(int velocidad)
+{
+    cout << " ------------------------------------------------------------------------------------------" << endl;
+    cout << " /                                                                                          \\" << endl;
+    cout << "| Velocidad de la nave: " << velocidad << " km/h                                                          |" << endl;
+    cout << " \\                                                                                          /" << endl;
+    cout << "  ------------------------------------------------------------------------------------------" << endl;
+
+
+}
+
+void imprimir_sleep(int velocidad)
+{
+    cout << "  Velocidad sleep: " << velocidad;
+}
+
+void sleep_for(int milisegundos)
+{
+    _sleep(milisegundos);
+}
+
+int calcular_sleep_velocidad(int velocidad)
+{
+    int sleep_velocidad = 0;
+    int tiempo_espera_base_1 = 500;
+    int tiempo_espera_base_2 = 400;
+    int tiempo_espera_base_3 = 300;
+    int tiempo_espera_base_4 = 200;
+    int tiempo_espera_base_5 = 100;
+
+    if (velocidad >= 5000 && velocidad <= 7000)
+    {
+        sleep_velocidad = tiempo_espera_base_1;
+    }
+    else if (velocidad >= 7001 && velocidad <= 10000)
+    {
+        sleep_velocidad = tiempo_espera_base_2;
+    }
+    else if (velocidad >= 10001 && velocidad <= 18000)
+    {
+        sleep_velocidad = tiempo_espera_base_3;
+    }
+    else if (velocidad >= 18001 && velocidad <= 29000)
+    {
+        sleep_velocidad = tiempo_espera_base_4;
+    }
+    else if (velocidad >= 29001 && velocidad <= 40000)
+    {
+        sleep_velocidad = tiempo_espera_base_5;
+    }
+
+    return sleep_velocidad;
+}
+
+int generar_velocidad_aleatoria()
+{
+    return 5000 + rand() % 35001; // Genera velocidad aleatoria entre 5000 y 40000
+}
+
+#include "pch.h"
+#include "menu.h"
+#include "escenarios.h"
+#include "dibujos.h"
+#include "mov_naves.h"
+#include "movimiento_intro.h"
+
+int n()
+{
+    return 1 + rand() % 8;
+}
+
+void juego()
+{
+    //generar tres naves aleatorias
+    
+    int n1 = n(), n2 = n(), n3 = n();
+
+    primnave();
+    naves(15, 15, n1);
+    cursor(5, 35); cout << "Nombre:RX400";
+
+    segunnave();
+    naves(85, 15, n2);
+    cursor(75, 35); cout << "Nombre:Delta21";
+
+    tercnave();
+    naves(145, 15, n3);
+    cursor(135, 35); cout << "Nombre:Ap10 ";
+
+    system("pause>0");
+    
+    Console::Clear();
+    /////
+    Tierra();
+    Marte();
+    torre_colisionada();
+    p1(80, 35);
+    p2(85, 35);
+    p3(90, 35);
+    p4(95, 35);
+    p5(100, 36);
+    p6(105, 36);
+    p7(110, 37);
+    p8(115, 37);
+    p9(120, 37);
+    p10(125, 37);
+    naves(7, 3, n1);
+
+    
+   
+}
+
+void intro()
+{
+    Tierra();
+    Marte();
+    torre_intacta();
+    movimiento_meteorito();
+}
+
+void ranking_menu()
+{
+    Tierra();
+    Marte();
+    torre_intacta();
+    ranking();
+
+}
+
+void creditos_menu()
+{
+    creditos();
+    creditos_texto();
+    Tierra();
+    Marte();
+    torre_colisionada();
+    p1(80, 35);
+    p2(85, 35);
+    p3(90, 35);
+    p4(95, 35);
+    p5(100, 36);
+    p6(105, 36);
+    p7(110, 37);
+    p8(115, 37);
+    p9(120, 37);
+    p10(125, 37);
+}
+
+int main()
+{
+    srand(time(nullptr));
+    int m;
+
+    while (1)
+    {
+
+        m = menu();
+ 
+        Console::Clear();//limpia la ventana
+
+        if (m == 1)
+        {
+            presentacion();
+            Tierra();
+            Marte();
+        }
+
+        if (m == 2)
+        {
+            reglasdeljuego();
+            Marte();
+        }
+
+        if (m == 3)
+        {
+            intro();
+        }
+
+        if (m == 4)
+        {
+            juego();
+            movimiento_nave1_horizontal();
+            
+        }
+
+        if (m == 5)
+        {
+            ranking_menu();
+        }
+
+        if (m == 6)
+        {
+            creditos_menu();
+        }
+
+        if (m == 7)
+        {
+
+            break;
+        }
+
+        system("pause>0");
+    }
+    
+    return 0;
+}
