@@ -1,0 +1,113 @@
+#pragma once
+#include "iostream"
+using namespace System;
+using namespace std;
+
+int menu()
+{
+	int op;
+	cout << endl << "\t\t MENU:";
+	cout << endl << "\t\t********";
+	cout << endl << "\t1.Generar valores";
+	cout << endl << "\t2.Listar las notas";
+	cout << endl << "\t3.Mostrar mayor valor";
+	cout << endl << "\t4.Mostrar menor valor";
+	cout << endl << "\t5. Ordenar de forma descendente";
+	cout << endl << "\tIngrese una opcion:";
+	cin >> op;
+	return op;
+}
+
+int* generar_valores(int* arreglo, int& N)
+{
+	N = 1 + rand() % 20;
+
+	arreglo = new int[N];
+	for (int i = 0; i < N; i++)
+	{
+		arreglo[i] = 1 + rand() % 100;
+	}
+	return arreglo;
+}
+
+int listar_notas(int* arreglo, int& N)
+{
+	if (arreglo != nullptr)
+	{
+		for (int i = 0; i < N; i++)
+		{
+			cout << "Numero[" << i << "]: " << arreglo[i] << endl;
+		}
+	}
+	else
+	{
+		cout << "Aun no hay arreglo";
+	}
+	return N;
+}
+
+
+void intercambiar(int& n1, int& n2)
+{
+	int aux;
+	aux = n1;
+	n1 = n2;
+	n2 = aux;
+}
+
+int mayor_valor(int* valor, int& N)
+{
+	int max_valor;
+	int indice_mayor = 0;
+	max_valor = valor[0];
+	for (int i = 0; i < N; i++)
+	{
+		max_valor = max(max_valor, valor[i]);
+		for (int i = 0; i < N; i++)
+		{
+
+			indice_mayor = i;
+		}
+	}
+	cout << "El maximo valor es: " << max_valor << endl;
+	cout << "Su posicion en el arreglo es: " << indice_mayor;
+	return indice_mayor;
+}
+
+int menor_valor(int* valor, int& N)
+{
+	int min_valor;
+	int indice_menor = 0;
+	min_valor = valor[0];
+	for (int i = 0; i < N; i++)
+	{
+		min_valor = min(min_valor, valor[i]);
+		if (valor[i] < valor[indice_menor])
+		{
+			indice_menor = i;
+		}
+
+	}
+
+	cout << "El minimo valor es: " << min_valor << endl;
+	cout << "Su posicion en el arreglo es: " << indice_menor;
+	return indice_menor;
+}
+
+void odernar_descendente(int* arreglo, int& N)
+{
+	for (int i = 0; i < N; i++)//para controlar las pasadas por el arreglo, primera segunda tercer etc
+	{
+		for (int j = 0; j < N; j++)//recorre los elementos de princio a fin, exceto el # de pasadas ya realizadas
+		{//en cada bucle se recorre uno menos al # de iteraciones, ya que al final ya estan en su lugar
+			if (arreglo[j] < arreglo[j + 1])
+			{//si el elemento actual es menor al posterior, intercambiarlo
+				intercambiar(arreglo[j], arreglo[j + 1]);
+			}
+		}
+	}
+	for (int i = 0; i < N; i++)
+	{
+		cout << "\t" << arreglo[i] << endl;
+	}
+}

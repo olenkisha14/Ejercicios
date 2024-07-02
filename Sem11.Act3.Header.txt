@@ -1,0 +1,117 @@
+#pragma once
+#include "iostream"
+using namespace System;
+using namespace std;
+
+int menu()
+{
+    int op;
+    cout << endl << "\t\t MENU:";
+    cout << endl << "\t\t********";
+    cout << endl << "\t1.Generar notas";
+    cout << endl << "\t2.Listar las notas";
+    cout << endl << "\t3.Ordenar de menor a mayor";
+    cout << endl << "\t4.Repeticiones y su conteo";
+    cout << endl << "\t5.Borrar todos los repetidos";
+    cout << endl << "\tIngrese una opcion:";
+    cin >> op;
+    return op;
+}
+
+int* generar_valor(int* arreglo, int& N)
+{
+    N = 0;
+    N = 1 + rand() % 31;
+
+    arreglo = new int[N];
+    for (int i = 0; i < N; i++)
+    {
+        arreglo[i] = rand() % (101 - 1 + 1) + 1;
+    }
+    return arreglo;
+}
+
+int listar_notas(int* arreglo, int& N)
+{
+    if (arreglo != nullptr)
+    {
+        for (int i = 0; i < N; i++)
+        {
+            cout << "Numero[" << i << "]: " << arreglo[i] << endl;
+        }
+    }
+    else
+    {
+        cout << "Aun no hay arreglo";
+    }
+    return N;
+}
+
+void ordenar_por_burbuja(int* arreglo, int& N)
+{    //ORDENAR POR BURBUJA
+    int aux;
+    for (int i = 0; i < N; i++)
+    {
+        for (int k = i + 1; k < N; k++)
+        {
+            if (arreglo[i] > arreglo[k])
+            {
+                aux = arreglo[i];
+                arreglo[i] = arreglo[k];
+                arreglo[k] = aux;
+            }
+        }
+    }
+    //imprime datos del arreglo
+    cout << endl << "DATOS ORDENADOS DEL ARREGLO" << endl;
+    for (int i = 0; i < N; i++)
+    {
+        cout << "\t" << arreglo[i] << endl;
+    }
+}
+
+int repeticiones_conteo(int* arreglo, int& N)
+{
+
+    //REPETICIONES Y SU CONTEO
+
+    cout << "Valores y sus repeticiones: " << endl;
+    int valor_actual = 0;
+    valor_actual = arreglo[0];
+    int conteo = 1;
+
+    for (int i = 1; i < N; i++)
+    {
+        if (arreglo[i] == valor_actual)
+        {
+            conteo++;
+        }
+        else
+        {
+            cout << "\tValor: " << valor_actual << ", Repeticiones: " << conteo << endl;
+            valor_actual = arreglo[i];
+            conteo = 1;
+        }
+    }
+    // Imprimir el último valor y su conteo
+    cout << "\tValor: " << valor_actual << ", Repeticiones: " << conteo << endl;
+    return valor_actual;
+}
+
+
+int valor_unico(int* arreglo, int& N)
+{
+    //VALORES UNICOS
+    cout << "Valores unicos: " << endl;
+    cout << "\t" << arreglo[0] << endl;
+
+    for (int i = 1; i < N; i++)
+    {
+        if (arreglo[i] != arreglo[i - 1])
+        {
+            cout << "\t" << arreglo[i] << endl;
+        }
+    }
+
+	return N;
+}

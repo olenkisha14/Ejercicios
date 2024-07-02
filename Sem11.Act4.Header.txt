@@ -1,0 +1,112 @@
+#pragma once
+#include "iostream"
+using namespace System;
+using namespace std;
+
+int menu()
+{
+	int op;
+	cout << endl << "\t\t MENU:";
+	cout << endl << "\t\t********";
+	cout << endl << "\t1.Generar valores e imprimirlos";
+	cout << endl << "\t2.Eliminar multiplo de 3";
+	cout << endl << "\t3.Mayor a menor";
+	cout << endl << "\t4.Agregar numero";
+	cout << endl << "\tIngrese una opcion:";
+	cin >> op;
+	return op;
+}
+
+int* generar_valores(int* arreglo, int& N)
+{
+	N = rand() % 51 + 1;
+
+	arreglo = new int[N];
+
+	for (int i = 0; i < N; i++)
+	{
+		arreglo[i] = rand() % 12 + 40;
+	}
+
+	for (int i = 0; i < N; i++)
+	{
+		cout << "Arreglo[" << i << "]: " << arreglo[i] << endl;
+	}
+	return arreglo;
+}
+
+
+int eleminar_multiplo3(int* arreglo, int& N)
+{
+	int count = 0;
+
+	for (int i = 0; i < N; i++)
+	{
+		if (arreglo[i] % 3 != 0)
+		{
+			arreglo[count++] = arreglo[i];
+			//para que cuente que arreglos no son multi de 3
+		}
+
+	}
+	N = count;
+	cout << "Arreglo sin multiplo de 3: " << endl;
+	for (int i = 0; i < N; i++)
+	{
+		cout << "Arreglo[" << i << "]: " << arreglo[i] << endl;
+	}
+	return count;
+}
+
+void ordenar_por_burbuja(int* arreglo, int& N)
+{    //ORDENAR POR BURBUJA
+	int aux;
+	for (int i = 0; i < N; i++)
+	{
+		for (int k = i + 1; k < N; k++)
+		{
+			if (arreglo[i] < arreglo[k])
+			{
+				aux = arreglo[i];
+				arreglo[i] = arreglo[k];
+				arreglo[k] = aux;
+			}
+		}
+	}
+	//imprime datos del arreglo
+	cout << endl << "Mayor a menor:" << endl;
+	for (int i = 0; i < N; i++)
+	{
+		cout << "Arreglo[" << i << "]: " << arreglo[i] << endl;
+	}
+}
+
+void agregar_numero(int*& arreglo, int& N, int num)
+{
+	int* nuevo_arreglo = new int[N + 1];
+	int i = 0;
+
+	// Copiar elementos menores que num al nuevo arreglo
+	while (i < N && arreglo[i] < num)
+	{
+		nuevo_arreglo[i] = arreglo[i];
+		i++;
+	}
+
+	// Insertar num en la posición actual de i
+	nuevo_arreglo[i] = num;
+
+	// Copiar elementos restantes del arreglo original
+	while (i < N)
+	{
+		nuevo_arreglo[i + 1] = arreglo[i];
+		i++;
+	}
+
+	N++;
+	delete[] arreglo;
+	arreglo = nuevo_arreglo;
+
+	cout << "Arreglo despues de agregar " << num << ":" << endl;
+	ordenar_por_burbuja(arreglo, N);
+}

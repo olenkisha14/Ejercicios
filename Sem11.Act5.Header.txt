@@ -1,0 +1,113 @@
+#pragma once
+#include "iostream"
+using namespace System;
+using namespace std;
+
+int menu()
+{
+	int op;
+	cout << endl << "\t\t MENU:";
+	cout << endl << "\t\t********";
+	cout << endl << "\t1.Generar notas";
+	cout << endl << "\t2.Listar las notas";
+	cout << endl << "\t3.Menor a mayor";
+	cout << endl << "\t4.Entero R";
+	cout << endl << "\tIngrese una opcion:";
+	cin >> op;
+	return op;
+}
+
+int* generar_valores(int* arreglo, int& N)
+{
+	N = rand() % (30 - 10 + 1) + 10;
+
+	arreglo = new int[N];
+
+	for (int i = 0; i < N; i++)
+	{
+		arreglo[i] = 1 + rand() % 50;
+	}
+
+	return arreglo;
+}
+
+int listar_arreglo(int* arreglo, int N)
+{
+	if (arreglo != nullptr)
+	{
+		for (int i = 0; i < N; i++)
+		{
+			cout << "Numero[" << i << "]: " << arreglo[i] << endl;
+		}
+	}
+	else
+	{
+		cout << "Aun no hay arreglo";
+	}
+	return N;
+}
+
+void ordenar_por_burbuja(int* arreglo, int N)
+{    //ORDENAR POR BURBUJA
+	int aux;
+	for (int i = 0; i < N; i++)
+	{
+		for (int k = i + 1; k < N; k++)
+		{
+			if (arreglo[i] > arreglo[k])
+			{
+				aux = arreglo[i];
+				arreglo[i] = arreglo[k];
+				arreglo[k] = aux;
+			}
+		}
+	}
+	//imprime datos del arreglo
+	cout << endl << "Menor a mayor:" << endl;
+	for (int i = 0; i < N; i++)
+	{
+		cout << "Arreglo[" << i << "]: " << arreglo[i] << endl;
+	}
+}
+
+void valor_unico(int* arreglo, int& N)
+{
+	// Eliminar repeticiones adicionales en el arreglo
+	int indice = 1;
+	for (int i = 1; i < N; i++)
+	{
+		if (arreglo[i] != arreglo[i - 1])
+		{
+			arreglo[indice++] = arreglo[i];
+		}
+	}
+	N = indice; // Actualizar el tamaño del arreglo
+}
+
+
+void modificar_arreglo(int* arreglo, int N, int R)
+{
+	// Crear un nuevo arreglo temporal con suficiente espacio para los valores repetidos R veces
+	int* arreglo_modificado = new int[N * R];
+	int indice_modificado = 0;
+
+	// Iterar sobre el arreglo original
+	for (int i = 0; i < N; i++)
+	{
+		int valor_actual = arreglo[i];
+
+		// Copiar el valor actual R veces en el arreglo_modificado
+		for (int j = 0; j < R; j++)
+		{
+			arreglo_modificado[indice_modificado++] = valor_actual;
+		}
+	}
+
+	// Copiar arreglo_modificado de vuelta al arreglo original
+	for (int i = 0; i < N * R; i++)
+	{
+		arreglo[i] = arreglo_modificado[i];
+	}
+
+	delete[] arreglo_modificado; // Liberar memoria del arreglo temporal
+}
