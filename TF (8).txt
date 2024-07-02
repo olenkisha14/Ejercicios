@@ -1,0 +1,1168 @@
+#pragma once
+
+//FUNCIONALIDAD - NIVEL 1
+
+int funcionalidad_temperatura1()
+{
+    Console::BackgroundColor = ConsoleColor::Black;
+    int vidas = 5;
+    system("cls"); // Limpiar pantalla al inicio
+
+    dibujar_recta_numerica();
+    dibujar_obiwan(18, 41);
+    dibujar_panel_de_control(170, 0);
+
+    dibujar_vidas1(vidas);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(182, 25);
+    cout << "TATOONIE" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    0                    3    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "OBI-WAN KENOBI" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     0                    3    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: PENDIENTE" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: PENDIENTE" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+
+    _getch();
+    while (vidas > 0) {
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 50);
+        cout << "Hola futuro Jedi, ahora nuestra mision sera aprender numeros negativos y positivos";
+        cursor(60, 51);
+        cout << "que nos permitira cumplir con nuestra mision.";
+        _getch();
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 53);
+        cout << "Para ello, debes de tener en cuenta a la Recta Numerica.";
+        cursor(60, 55);
+        cout << "La Recta Numerica nos permitira distinguir a los numeros positivos de los negativos.";
+
+        //n negativos
+        _getch();
+        system("cls"); // Limpiar pantalla al inicio
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_recta_numerica();
+        dibujar_obiwan(18, 41);
+        dibujar_numeros_negativos(0, 3);
+        dibujar_panel_de_control(170, 0);
+
+        dibujar_vidas1(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+
+        cursor(60, 50);
+        cout << "Los numeros negativos se caracterizan por tener el signo ( - )";
+        cursor(60, 52);
+        cout << "Es signo (-) siempre antecede a cualquier numero negativo";
+        cursor(60, 54);
+        cout << "En la recta numerica podemos visualizar que se ubican a la izquierda del 0 ";
+
+        //n positivos
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_recta_numerica();
+        dibujar_obiwan(18, 41);
+        dibujar_numeros_positivos(0, 3);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas1(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+            
+        cursor(60, 50);
+        cout << "Los numeros positivos pueden tener 2 formas de representarse.";
+        cursor(60, 52);
+        cout << "  1. El signo (+) antecede al numero positivo";
+        cursor(60, 54);
+        cout << "  2. Se pueden representar sin el signo (+), pues se sobreentiende que  ";
+        cursor(60, 55);
+        cout << "     que es un numero positivo";
+
+
+        //numero 0
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_recta_numerica();
+        dibujar_obiwan(18, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_numero0(0, 3);
+        dibujar_vidas1(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(79, 28);
+        cout << "EXCEPCION";
+        cursor(60, 50);
+        cout << "El numero 0 es una excepcion debido a que es considerado como un numero neutro";
+
+        //EJERCICIO 1 - NEGATIVOS
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_recta_numerica();
+        dibujar_obiwan(18, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_nivel1_ejercicio_negativos(0, 3);
+        dibujar_vidas1(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        int nivel1_ejercicio_negativos;
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(172, 61);
+        cout << "*************TEORIA*************" << endl;
+        cursor(174, 63);
+        cout << "N° Negativos: Antecede ( - )" << endl;
+        cursor(174, 64);
+        cout << "N° Positivos: Antecede ( + ) " << endl;
+        cursor(174, 65);
+        cout << "N° Positivos: No tiene signo " << endl;
+        cursor(60, 50);
+        cout << "Cuantos numeros negativos hay? "; cin >> nivel1_ejercicio_negativos;
+        if (nivel1_ejercicio_negativos == 5)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 50);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+        }
+        else
+        {
+            while (nivel1_ejercicio_negativos != 5)
+            {
+                disminuir_vida(&vidas);
+
+                dibujar_vidas3(vidas);
+                if (vidas == 0)
+                {
+
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas3(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 50);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> nivel1_ejercicio_negativos;
+
+            }
+            if (nivel1_ejercicio_negativos == 5)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 50);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+            }
+        }
+
+        //EJERCICIO 1 - POSITIVOS
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_recta_numerica();
+        dibujar_obiwan(18, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_nivel1_ejercicio_positivos(0, 3);
+        dibujar_vidas1(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        int nivel1_ejercicio_positivos;
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(172, 61);
+        cout << "*************TEORIA*************" << endl;
+        cursor(174, 63);
+        cout << "N° Negativos: Antecede ( - )" << endl;
+        cursor(174, 64);
+        cout << "N° Positivos: Antecede ( + )" << endl;
+        cursor(174, 65);
+        cout << "N° Positivos: No tiene signo" << endl;
+        cursor(60, 50);
+        cout << "Cuantos numeros positivos hay? "; cin >> nivel1_ejercicio_positivos;
+        if (nivel1_ejercicio_positivos == 2)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 50);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+        }
+        else
+        {
+            while (nivel1_ejercicio_positivos != 2)
+            {
+                disminuir_vida(&vidas);
+
+                dibujar_vidas3(vidas);
+                if (vidas == 0)
+                {
+
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas3(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 50);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> nivel1_ejercicio_positivos;
+
+            }
+            if (nivel1_ejercicio_positivos == 2)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 50);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+            }
+        }
+
+
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_recta_numerica();
+        dibujar_obiwan(18, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas1(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(60, 50);
+        cout << "Lo hiciste muy bien! Con el abastecimiento de combustible revisado, ahora";
+        cursor(60, 51);
+        cout << "podemos partir al mundo <TATOONIE>";
+
+        _getch();
+        system("cls"); // Limpiar pantalla al inicio
+        dibujar_recta_numerica();
+        dibujar_sandtrooper(18, 43);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas1(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(60, 50);
+        cout << "Detengase inmediatamente! Está entrando en una zona restringida. Deje caer sus armas";
+        cursor(60, 51);
+        cout << "muestre sus identificaciones de inmediato, o nos veremos obligados a tomar ";
+        cursor(60, 52);
+        cout << "medidas drásticas.";
+
+        system("pause>0");
+        break;
+    }
+    return 0;
+}
+
+//FUNCIONALIDAD - NIVEL 2
+
+int funcionalidad_temperatura2()
+{
+    Console::BackgroundColor = ConsoleColor::Black;
+    int vidas = 5;
+    system("cls"); // Limpiar pantalla al inicio
+
+    ////////////////////   NIVEL 2 - TEMPERATURA  //////////////////////////////
+    Console::BackgroundColor = ConsoleColor::Black;
+    system("cls"); // Limpiar pantalla al inicio
+    dibujar_recta_numerica();
+    dibujar_luke(19, 41);
+    dibujar_recta_valor_negativos(0, 3);
+    dibujar_panel_de_control(170, 0);
+
+    dibujar_vidas2(vidas);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(178, 25);
+    cout << "LUNA BOCOSA DE ENDOR" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    1                    2    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "LUKE SKYWALKER" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     1                    2    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: SI" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: PENDIENTE" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+
+    _getch();
+    // n NEGATIVOS
+    while (vidas > 0) {
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 50);
+        cout << "Hola futuro Jedi, en este nivel aprenderas sobre la diferencia de valores que tienen los";
+        cursor(60, 51);
+        cout << "numeros negativos y positivos.";
+        _getch();
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 52);
+        cout << "Para ello, debes de tener en cuenta a la Recta Numerica.";
+        cursor(60, 53);
+        cout << "Entre mas alejado un numero este del 0 es menor ";
+
+        //  N POSITIVOS
+        _getch();
+        dibujar_recta_valor_positivos(0, 3);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 54);
+        cout << "Los numeros positivos cuanto mas alejados del 0 esten ";
+        cursor(60, 55);
+        cout << "tienen un valor mayor";
+
+        //EJERCICIO NEGATIVOS
+        _getch();
+        dibujar_nivel2_ejercicio_negativos(0, 3);
+        int nivel2_ejercicio_negativos;
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(172, 58);
+        cout << "*************TEORIA*************" << endl;
+        cursor(174, 60);
+        cout << "N° Negativos: Entre mas lejos" << endl;
+        cursor(174, 61);
+        cout << "un numero este del 0 es menor" << endl;
+        cursor(174, 62);
+        cout << "N° Positivos: Cuanto mas alejados del 0" << endl;
+        cursor(174, 63);
+        cout << " esten tienen un valor mayor " << endl;
+        cursor(60, 57);
+        cout << "Que termometro tiene la mayor temperatura " << endl;//2
+        cursor(60, 58);
+        cout << "Cual seria el resultado? "; cin >> nivel2_ejercicio_negativos;
+        if (nivel2_ejercicio_negativos == 2)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 58);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+        }
+        else
+        {
+            while (nivel2_ejercicio_negativos != 2)
+            {
+                disminuir_vida(&vidas);
+
+                dibujar_vidas2(vidas);
+                if (vidas == 0)
+                {
+
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas2(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 58);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> nivel2_ejercicio_negativos;
+
+            }
+            if (nivel2_ejercicio_negativos == 2)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 58);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+            }
+        }
+
+        //EJERCICIO POSITIVOS
+
+        _getch();
+        system("cls"); // Limpiar pantalla al inicio
+        Console::BackgroundColor = ConsoleColor::Black;
+        int nivel2_ejercicio_positivos;
+        dibujar_recta_numerica();
+        dibujar_luke(19, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_nivel2_ejercicio_positivos(0, 3);
+        dibujar_vidas2(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(172, 61);
+        cout << "*************TEORIA*************" << endl;
+        cursor(174, 63);
+        cout << "N° Negativos: Entre mas lejos un " << endl;
+        cursor(174, 64);
+        cout << "numero este del 0 es menor" << endl;
+        cursor(174, 66);
+        cout << "N° Positivos: Cuanto mas alejados del 0 esten " << endl;
+        cursor(174, 67);
+        cout << "tienen un valor mayor " << endl;
+        cursor(60, 50);
+        cout << "Que termometro tiene la mayor temperatura " << endl;//2
+        cursor(60, 51);
+        cout << "Cual seria el resultado? "; cin >> nivel2_ejercicio_positivos;
+        if (nivel2_ejercicio_positivos == 2)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 51);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+        }
+        else
+        {
+            while (nivel2_ejercicio_positivos != 2)
+            {
+                disminuir_vida(&vidas);
+
+                dibujar_vidas2(vidas);
+                if (vidas == 0)
+                {
+
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas2(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 51);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> nivel2_ejercicio_positivos;
+
+            }
+            if (nivel2_ejercicio_positivos == 2)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 51);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+            }
+        }
+
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_recta_numerica();
+        dibujar_luke(19, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas2(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+
+        cursor(60, 50);
+        cout << "Muy bien hecho, futuro Jedi! Ahora que ya verificamos todo, podemos ingresar al";
+        cursor(60, 51);
+        cout << "nuevo mundo llamado <LUNA BOCOSA DE ENDOR>.";
+
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_recta_numerica();
+        dibujar_scoutrooper(19, 43);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas2(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(60, 50);
+        cout << "Alto ahi!No des un paso ms. Estás bajo la jurisdicción del Imperio. Identifícate";
+        cursor(60, 51);
+        cout << "de inmediato y sigue mis ordenes, o enfrentate a las consecuencias.";
+
+        system("pause>0");
+
+
+        break;
+    }
+
+
+    return 0;
+  }
+
+
+  int funcionalidad_temperatura3()
+  {
+      Console::BackgroundColor = ConsoleColor::Black;
+      int vidas = 5;
+      system("cls"); // Limpiar pantalla al inicio
+      /////////////////////// NIVEL 3 //////////////////////////////////
+      
+      Console::BackgroundColor = ConsoleColor::Black;
+      
+      dibujar_recta_numerica();
+      dibujar_conversion_formula(0, 3);
+      dibujar_panel_de_control(170, 0);
+      dibujar_rey(24, 41);
+      dibujar_vidas3(vidas);
+      Console::BackgroundColor = ConsoleColor::White;
+      Console::ForegroundColor = ConsoleColor::Black;
+      cursor(184, 2);
+      cout << "*VIDAS*" << endl;
+      cursor(172, 23);
+      cout << "*************DESTINO************" << endl;
+      cursor(178, 25);
+      cout << "ESTRELLA DE LA MUERTE" << endl;
+      cursor(172, 30);
+      cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+      cursor(172, 32);
+      cout << " OBTENIDOS           FALTANTES" << endl;
+      cursor(172, 33);
+      cout << "    2                    1    " << endl;
+      cursor(172, 38);
+      cout << "**********TUTOR ACTUAL**********" << endl;
+      cursor(181, 40);
+      cout << "REY SKYWALKER" << endl;
+      cursor(172, 45);
+      cout << "************ENEMIGOS************" << endl;
+      cursor(172, 47);
+      cout << " DERROTADOS           FALTANTES" << endl;
+      cursor(172, 48);
+      cout << "     2                    1    " << endl;
+      cursor(172, 53);
+      cout << "*******NIVELES SUPERADOS********" << endl;
+      cursor(177, 55);
+      cout << "-NIVEL I: SI" << endl;
+      cursor(177, 56);
+      cout << "-NIVEL II: SI" << endl;
+      cursor(177, 57);
+      cout << "-NIVEL III: PENDIENTE" << endl;
+      
+      _getch();
+      // 1
+      while (vidas > 0) {
+          Console::BackgroundColor = ConsoleColor::White;
+          Console::ForegroundColor = ConsoleColor::Black;
+          cursor(60, 50);
+          cout << "Hola futuro Jedi, en este nivel aprenderas sobre la conversion de temperatura";
+          cursor(60, 52);
+          cout << "Aprenderas a hacer la conversion de Celsius a Kelvin";
+          _getch();
+          Console::BackgroundColor = ConsoleColor::White;
+          Console::ForegroundColor = ConsoleColor::Black;
+          cursor(60, 53);
+          cout << "Para ello, debes de tener en cuenta la formula de conversion";
+          ///////1
+          _getch();
+          dibujar_nivel3_ejercicio1_conversion(0, 3);
+          int nivel3_ejercicio1_conversion;
+          Console::BackgroundColor = ConsoleColor::White;
+          Console::ForegroundColor = ConsoleColor::Black;
+          cursor(172, 61);
+          cout << "*************TEORIA*************" << endl;
+          cursor(174, 63);
+          cout << "         K = C° + 273" << endl;
+
+          cursor(60, 55);
+          cout << "CUANTO ES  - 270 °C EN K ? "; 
+          cursor(60, 56);
+          cout << " - 270 °C + 273 = "; cin >> nivel3_ejercicio1_conversion;
+          if (nivel3_ejercicio1_conversion == 3)
+          {
+              Console::BackgroundColor = ConsoleColor::White;
+              Console::ForegroundColor = ConsoleColor::Black;
+              cursor(60, 56);
+              cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+          }
+          else
+          {
+              while (nivel3_ejercicio1_conversion != 3)
+              {
+                  disminuir_vida(&vidas);
+
+                  dibujar_vidas3(vidas);
+                  if (vidas == 0)
+                  {
+
+                      Console::BackgroundColor = ConsoleColor::White;
+                      Console::ForegroundColor = ConsoleColor::Black;
+                      cursor(179, 19);
+                      cout << "Te quedan " << vidas << " vidas." << endl;
+                      cursor(175, 20);
+                      cout << "Has perdido todas tus vidas." << endl;
+                      cursor(175, 21);
+                      cout << "Juego terminado." << endl;
+                      dibujar_vidas3(vidas);
+                      return 0;
+                  }
+                  Console::BackgroundColor = ConsoleColor::White;
+                  Console::ForegroundColor = ConsoleColor::Black;
+                  cursor(179, 19);
+                  cout << "Te quedan " << vidas << " vidas." << endl;
+                  cursor(60, 56);
+                  cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> nivel3_ejercicio1_conversion;
+
+              }
+              if (nivel3_ejercicio1_conversion == 3)
+              {
+                  Console::BackgroundColor = ConsoleColor::White;
+                  Console::ForegroundColor = ConsoleColor::Black;
+                  cursor(60, 56);
+                  cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+              }
+          }
+          ///////2
+          _getch();
+          system("cls");
+          
+          Console::BackgroundColor = ConsoleColor::White;
+          Console::ForegroundColor = ConsoleColor::Black;
+          dibujar_recta_numerica();
+          dibujar_nivel3_ejercicio2_temperatura(0, 3);
+          dibujar_panel_de_control(170, 0);
+          dibujar_rey(24, 41);
+          dibujar_vidas3(vidas);
+          Console::BackgroundColor = ConsoleColor::White;
+          Console::ForegroundColor = ConsoleColor::Black;
+          cursor(184, 2);
+          cout << "*VIDAS*" << endl;
+          cursor(172, 23);
+          cout << "*************DESTINO************" << endl;
+          cursor(178, 25);
+          cout << "ESTRELLA DE LA MUERTE" << endl;
+          cursor(172, 30);
+          cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+          cursor(172, 32);
+          cout << " OBTENIDOS           FALTANTES" << endl;
+          cursor(172, 33);
+          cout << "    2                    1    " << endl;
+          cursor(172, 38);
+          cout << "**********TUTOR ACTUAL**********" << endl;
+          cursor(181, 40);
+          cout << "REY SKYWALKER" << endl;
+          cursor(172, 45);
+          cout << "************ENEMIGOS************" << endl;
+          cursor(172, 47);
+          cout << " DERROTADOS           FALTANTES" << endl;
+          cursor(172, 48);
+          cout << "     2                    1    " << endl;
+          cursor(172, 53);
+          cout << "*******NIVELES SUPERADOS********" << endl;
+          cursor(177, 55);
+          cout << "-NIVEL I: SI" << endl;
+          cursor(177, 56);
+          cout << "-NIVEL II: SI" << endl;
+          cursor(177, 57);
+          cout << "-NIVEL III: PENDIENTE" << endl;
+          cursor(172, 61);
+          cout << "*************TEORIA*************" << endl;
+          cursor(174, 63);
+          cout << "         K = C° + 273" << endl;
+          int nivel3_ejercicio2_temperatura;
+          cursor(60, 50);
+          cout << "CUANTO ES  -221 °C EN K ? ";
+          cursor(60, 51);
+          cout << "-221 + 273 = "; cin >> nivel3_ejercicio2_temperatura;
+          if (nivel3_ejercicio2_temperatura == 52)
+          {
+              Console::BackgroundColor = ConsoleColor::White;
+              Console::ForegroundColor = ConsoleColor::Black;
+              cursor(60, 51);
+              cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+          }
+          else
+          {
+              while (nivel3_ejercicio2_temperatura != 52)
+              {
+                  disminuir_vida(&vidas);
+
+                  dibujar_vidas3(vidas);
+                  if (vidas == 0)
+                  {
+
+                      Console::BackgroundColor = ConsoleColor::White;
+                      Console::ForegroundColor = ConsoleColor::Black;
+                      cursor(179, 19);
+                      cout << "Te quedan " << vidas << " vidas." << endl;
+                      cursor(175, 20);
+                      cout << "Has perdido todas tus vidas." << endl;
+                      cursor(175, 21);
+                      cout << "Juego terminado." << endl;
+                      dibujar_vidas3(vidas);
+                      return 0;
+                  }
+                  Console::BackgroundColor = ConsoleColor::White;
+                  Console::ForegroundColor = ConsoleColor::Black;
+                  cursor(179, 19);
+                  cout << "Te quedan " << vidas << " vidas." << endl;
+                  cursor(60, 51);
+                  cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> nivel3_ejercicio2_temperatura;
+
+              }
+              if (nivel3_ejercicio2_temperatura == 52)
+              {
+                  Console::BackgroundColor = ConsoleColor::White;
+                  Console::ForegroundColor = ConsoleColor::Black;
+                  cursor(60, 51);
+                  cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+              }
+          }
+          _getch();
+          system("cls");
+          Console::BackgroundColor = ConsoleColor::Black;
+          dibujar_recta_numerica();
+          dibujar_rey(24, 41);
+          dibujar_panel_de_control(170, 0);
+          dibujar_vidas3(vidas);
+          Console::BackgroundColor = ConsoleColor::White;
+          Console::ForegroundColor = ConsoleColor::Black;
+          cursor(184, 2);
+          cout << "*VIDAS*" << endl;
+          cursor(172, 23);
+          cout << "*************DESTINO************" << endl;
+          cursor(178, 25);
+          cout << "ESTRELLA DE LA MUERTE" << endl;
+          cursor(172, 30);
+          cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+          cursor(172, 32);
+          cout << " OBTENIDOS           FALTANTES" << endl;
+          cursor(172, 33);
+          cout << "    2                    1    " << endl;
+          cursor(172, 38);
+          cout << "**********TUTOR ACTUAL**********" << endl;
+          cursor(181, 40);
+          cout << "REY SKYWALKER" << endl;
+          cursor(172, 45);
+          cout << "************ENEMIGOS************" << endl;
+          cursor(172, 47);
+          cout << " DERROTADOS           FALTANTES" << endl;
+          cursor(172, 48);
+          cout << "     2                    1    " << endl;
+          cursor(172, 53);
+          cout << "*******NIVELES SUPERADOS********" << endl;
+          cursor(177, 55);
+          cout << "-NIVEL I: SI" << endl;
+          cursor(177, 56);
+          cout << "-NIVEL II: SI" << endl;
+          cursor(177, 57);
+          cout << "-NIVEL III: PENDIENTE" << endl;
+          cursor(60, 50);
+          cout << "Muy bien hecho, futuro Jedi! Logramos convertir adecuadamente las temperaturas";
+          cursor(60, 51);
+          cout << "esto nos ayudará en nuestro viaje hacia nuestro destino";
+
+          _getch();
+          cursor(60, 53);
+          cout << "Nuestro destino final es la <ESTRELLA DE LA MUERTE>.";
+
+          _getch();
+          system("cls");
+          Console::BackgroundColor = ConsoleColor::Black;
+          dibujar_recta_numerica();
+          dibujar_darthvader(24, 41);
+          dibujar_panel_de_control(170, 0);
+          dibujar_vidas3(vidas);
+          Console::BackgroundColor = ConsoleColor::White;
+          Console::ForegroundColor = ConsoleColor::Black;
+          cursor(184, 2);
+          cout << "*VIDAS*" << endl;
+          cursor(172, 23);
+          cout << "*************DESTINO************" << endl;
+          cursor(178, 25);
+          cout << "ESTRELLA DE LA MUERTE" << endl;
+          cursor(172, 30);
+          cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+          cursor(172, 32);
+          cout << " OBTENIDOS           FALTANTES" << endl;
+          cursor(172, 33);
+          cout << "    2                    1    " << endl;
+          cursor(172, 38);
+          cout << "**********TUTOR ACTUAL**********" << endl;
+          cursor(181, 40);
+          cout << "REY SKYWALKER" << endl;
+          cursor(172, 45);
+          cout << "************ENEMIGOS************" << endl;
+          cursor(172, 47);
+          cout << " DERROTADOS           FALTANTES" << endl;
+          cursor(172, 48);
+          cout << "     2                    1    " << endl;
+          cursor(172, 53);
+          cout << "*******NIVELES SUPERADOS********" << endl;
+          cursor(177, 55);
+          cout << "-NIVEL I: SI" << endl;
+          cursor(177, 56);
+          cout << "-NIVEL II: SI" << endl;
+          cursor(177, 57);
+          cout << "-NIVEL III: PENDIENTE" << endl;
+          cursor(60, 50);
+          cout << "No podras evitar mi triunfo, ese destino es inevitable. Todo conduce al mismo final,";
+          cursor(60, 51);
+          cout << "quieras o no aceptarlo.";
+
+
+
+
+          system("pause>0");
+          break;
+      }
+      return 0;
+  }

@@ -1,0 +1,831 @@
+#pragma once
+
+
+//PORCENTAJE
+bool nivel1_porcentaje_piedra_ejer() {
+    funcionalidad_combustible();
+
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    funcionalidad_naves();
+
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_nivel1();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_obiwan(18, 40);
+    dibujar_MC_Nivel1(95, 18);
+    dibujar_vida1(173, 4);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(182, 25);
+    cout << "TATOONIE" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    0                    3    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "OBI-WAN KENOBI" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     0                    3    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: PENDIENTE" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: PENDIENTE" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+    cursor(60, 49);
+    cout << "Las 3 partes de la gema representan el 100%, si tuviera un fragmento tendrian el 33%";
+    cursor(60, 50);
+    cout << "de la gema. Cuanto % me faltaria para llegar a 100%?";
+    int respuesta;
+    cursor(60, 51);
+    cout << "x = 100 - 33: ";
+    cin >> respuesta;
+    return respuesta == (100 - 33);
+}
+
+bool nivel2_porcentaje_piedra_ejer() {
+
+    funcionalidad_combustible2();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    funcionalidad_naves();
+
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_nivel2();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_luke(19, 40);
+    dibujar_MC_Nivel2(92, 16);
+    dibujar_vida1(173, 4);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(178, 25);
+    cout << "LUNA BOCOSA DE ENDOR" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    1                    2    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "LUKE SKYWALKER" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     1                    2    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: SI" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: PENDIENTE" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+    cursor(60, 49);
+    cout << "Si tres fragmentos de la gema son 100%, cuantos frgamentos representan el 66%. Redonde";
+    cursor(60, 50);
+    cout << "la repuesta a un numero entero.";
+    int respuesta;
+    cursor(60, 51);
+    cout << "x = 100 - 66: ";
+    cin >> respuesta;
+    return respuesta == (100 - 66);
+}
+
+bool nivel3_porcentaje_piedra_ejer() {
+
+    funcionalidad_combustible3();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    funcionalidad_naves();
+
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_nivel3();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_rey(24, 40);
+    dibujar_MC_Nivel3(78, 7);
+    dibujar_vida1(173, 4);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(178, 25);
+    cout << "ESTRELLA DE LA MUERTE" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    2                    1    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "REY SKYWALKER" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     2                    1    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: SI" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: SI" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+    cursor(60, 49);
+    cout << "Si tres fragmentos de la gema son 100%, cuantos frgamentos representan el 66%. Redonde";
+    cursor(60, 50);
+    cout << "la repuesta a un numero entero.";
+    int respuesta;
+    cursor(60, 51);
+    cout << "x = 66% x 3: ";
+    cursor(60, 52);
+    cout << "   --------- ";
+    cursor(60, 53);
+    cout << "      100% ";
+    cursor(60, 54);
+    cout << "x=";cin >> respuesta;
+    return respuesta == (3 - 1);
+}
+
+
+
+void jugarTurno_porcentaje(Jugador* jugador) {
+    jugador->puntos = 0;
+    for (int nivel = 1; nivel <= 3; ++nivel) {
+        bool nivelCompleto = true;
+
+        bool respuestaCorrecta = false;
+        if (nivel == 1) {
+            respuestaCorrecta = nivel1_porcentaje_piedra_ejer();
+
+        }
+        else if (nivel == 2) {
+            respuestaCorrecta = nivel2_porcentaje_piedra_ejer();
+
+        }
+        else if (nivel == 3) {
+            respuestaCorrecta = nivel3_porcentaje_piedra_ejer();
+        }
+        if (!respuestaCorrecta) {
+            getch();
+            system("cls");
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            dibujar_gameover();
+            dibujar_yoda(12, 40);
+            dibujar_obiwan(40, 40);
+            dibujar_luke(135, 40);
+            dibujar_rey(168, 40);
+            _getch();
+            system("cls");
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            dibujar_fondo_ranking();
+            nombres_creditos();
+            dibujar_yoda(12, 40);
+            dibujar_obiwan(40, 40);
+            dibujar_luke(135, 40);
+            dibujar_rey(168, 40);
+            nivelCompleto = false;
+            break;
+       
+        }
+        _getch();
+        system("cls");
+        ;
+        if (nivelCompleto) {
+            if (nivel == 1) {
+                dibujar_conseguir_piedra();
+                dibujar_gema_fragmento1(95, 5);
+                dibujar_logro_fragmento(10, 50);
+                _getch();
+
+            }
+            else if (nivel == 2) {
+                dibujar_conseguir_piedra();
+                dibujar_gema_fragmento2(80, 20);
+                dibujar_logro_fragmento(10, 50);
+                _getch();
+            }
+            else if (nivel == 3) {
+                dibujar_conseguir_piedra();
+                dibujar_gema_fragmento3(70, 2);
+                dibujar_logro_fragmento(10, 50);
+                _getch();
+            }
+            jugador->puntos += 100;
+
+        }
+        else {
+            break;
+        }
+    }
+    if (jugador->puntos == 300) {
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        Console::ForegroundColor = ConsoleColor::White;
+        dibujar_conseguir_piedra();
+        dibujar_gema(75, 5);
+        dibujar_logro_gema(30, 50);
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        Console::ForegroundColor = ConsoleColor::White;
+        dibujar_fondo_ranking();
+        dibujar_you_win(75, 2);
+        nombres_creditos();
+        dibujar_yoda(30, 39);
+        dibujar_obiwan(70, 38);
+        dibujar_luke(110, 38);
+        dibujar_rey(150, 38);
+
+    }
+}
+
+int funcionalidad_porcentaje()
+{
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+    Console::BackgroundColor = ConsoleColor::Black;
+    const int MAX_JUGADORES = 3;
+    Jugador jugadores[MAX_JUGADORES];
+    int numJugadores;
+
+    do {
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 49);
+        cout << "Ingrese la cantidad de jugadores (1 a 3): ";
+        cin >> numJugadores;
+    } while (numJugadores < 1 || numJugadores > MAX_JUGADORES);
+
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+
+    for (int i = 0; i < numJugadores; ++i) {
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 49 + i);
+        cout << "Ingrese el nombre del jugador " << i + 1 << ": ";
+        cin >> jugadores[i].nombre;
+        jugadores[i].puntos = 0;
+    }
+
+    for (int i = 0; i < numJugadores; ++i) {
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_tutorial();
+        dibujar_panel_de_control2(170, 0);
+        dibujar_yoda(20, 40);
+        dibujar_MC_tutorial(70, 10);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 49);
+        cout << "Turno de " << jugadores[i].nombre << endl;
+        _getch();
+
+        jugarTurno_porcentaje(&jugadores[i]);
+
+    }
+    _getch();
+    system("cls");
+    dibujar_conseguir_piedra();
+    Console::BackgroundColor = ConsoleColor::Black;
+    cursor(60, 49);
+    mostrarRanking(jugadores, numJugadores);
+
+    system("pause>0");
+    return 0;
+}
+
+
+//NUMEROS
+bool nivel1_numeros_piedra_ejer() 
+{
+
+    funcionalidad_temperatura1();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    funcionalidad_naves();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_nivel1();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_obiwan(18, 40);
+    dibujar_MC_Nivel1(95, 18);
+    dibujar_vida1(173, 4);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(182, 25);
+    cout << "TATOONIE" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    0                    3    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "OBI-WAN KENOBI" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     0                    3    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: PENDIENTE" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: PENDIENTE" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+    cursor(60, 49);
+    cout << "En la cuenta -8, 10, -20, -45, 0";
+    cursor(60, 50);
+    cout << "Cuantos n son negativos?";
+    int respuesta;
+    cursor(60, 51);
+    cin >> respuesta;
+    return respuesta == 3;
+}
+
+bool nivel2_numeros_piedra_ejer()
+{
+    funcionalidad_temperatura2();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    funcionalidad_naves();
+
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_nivel2();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_luke(19, 40);
+    dibujar_MC_Nivel2(92, 16);
+    dibujar_vida1(173, 4);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(178, 25);
+    cout << "LUNA BOCOSA DE ENDOR" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    1                    2    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "LUKE SKYWALKER" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     1                    2    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: SI" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: PENDIENTE" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+    cursor(60, 49);
+    cout << "Diferencia de valores";
+    cursor(60, 50);
+    cout << "x = -25 - 27";
+    int respuesta;
+    cursor(60, 51);
+    cin >> respuesta;
+    return respuesta == (-25 - 27);
+}
+
+bool nivel3_numeros_piedra_ejer() {
+
+    funcionalidad_temperatura3();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    funcionalidad_naves();
+
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_nivel3();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_rey(24, 40);
+    dibujar_MC_Nivel3(78, 7);
+    dibujar_vida1(173, 4);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(178, 25);
+    cout << "ESTRELLA DE LA MUERTE" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    2                    1    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "REY SKYWALKER" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     2                    1    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: SI" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: SI" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+    cursor(60, 49);
+    cout << "Conversion de Cel a Kel: K = C + 273";
+    cursor(60, 50);
+    cout << "Cuanto es -25 a K?";
+    int respuesta;
+    cursor(60, 51);
+    cout << "x = -25 + 273";cin >> respuesta;
+    return respuesta == (248);
+}
+
+
+
+void jugarTurno_numeros(Jugador* jugador) {
+    jugador->puntos = 0;
+    for (int nivel = 1; nivel <= 3; ++nivel) {
+        bool nivelCompleto = true;
+
+        bool respuestaCorrecta = false;
+        if (nivel == 1) {
+            respuestaCorrecta = nivel1_numeros_piedra_ejer();
+
+        }
+        else if (nivel == 2) {
+            respuestaCorrecta = nivel2_numeros_piedra_ejer();
+
+        }
+        else if (nivel == 3) {
+            respuestaCorrecta = nivel3_numeros_piedra_ejer();
+        }
+        if (!respuestaCorrecta) {
+            _getch();
+            system("cls");
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            dibujar_gameover();
+            dibujar_yoda(12, 40);
+            dibujar_obiwan(40, 40);
+            dibujar_luke(135, 40);
+            dibujar_rey(168, 40);
+            _getch();
+            system("cls");
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            dibujar_fondo_ranking();
+            nombres_creditos();
+            dibujar_yoda(12, 40);
+            dibujar_obiwan(40, 40);
+            dibujar_luke(135, 40);
+            dibujar_rey(168, 40);
+            nivelCompleto = false;
+            break;
+        }
+        _getch();
+        system("cls");
+        ;
+        if (nivelCompleto) {
+            if (nivel == 1) {
+                dibujar_conseguir_piedra();
+                dibujar_gema_fragmento1(95, 5);
+                dibujar_logro_fragmento(10, 50);
+                _getch();
+
+            }
+            else if (nivel == 2) {
+                dibujar_conseguir_piedra();
+                dibujar_gema_fragmento2(80, 20);
+                dibujar_logro_fragmento(10, 50);
+                _getch();
+            }
+            else if (nivel == 3) {
+                dibujar_conseguir_piedra();
+                dibujar_gema_fragmento3(70, 2);
+                dibujar_logro_fragmento(10, 50);
+                _getch();
+            }
+            jugador->puntos += 100;
+
+        }
+        else {
+            break;
+        }
+    }
+    if (jugador->puntos == 300) {
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        Console::ForegroundColor = ConsoleColor::White;
+        dibujar_conseguir_piedra();
+        dibujar_gema(75, 5);
+        dibujar_logro_gema(30, 50);
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        Console::ForegroundColor = ConsoleColor::White;
+        dibujar_fondo_ranking();
+        dibujar_you_win(75, 2);
+        nombres_creditos();
+        dibujar_yoda(30, 39);
+        dibujar_obiwan(70, 38);
+        dibujar_luke(110, 38);
+        dibujar_rey(150, 38);
+
+    }
+}
+
+int funcionalidad_numero()
+{
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+    Console::BackgroundColor = ConsoleColor::Black;
+    const int MAX_JUGADORES = 3;
+    Jugador jugadores[MAX_JUGADORES];
+    int numJugadores;
+
+    do {
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 49);
+        cout << "Ingrese la cantidad de jugadores (1 a 3): ";
+        cin >> numJugadores;
+    } while (numJugadores < 1 || numJugadores > MAX_JUGADORES);
+
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+
+    for (int i = 0; i < numJugadores; ++i) {
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 49 + i);
+        cout << "Ingrese el nombre del jugador " << i + 1 << ": ";
+        cin >> jugadores[i].nombre;
+        jugadores[i].puntos = 0;
+    }
+
+    for (int i = 0; i < numJugadores; ++i) {
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_tutorial();
+        dibujar_panel_de_control2(170, 0);
+        dibujar_yoda(20, 40);
+        dibujar_MC_tutorial(70, 10);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 49);
+        cout << "Turno de " << jugadores[i].nombre << endl;
+        _getch();
+
+        jugarTurno_numeros(&jugadores[i]);
+
+    }
+    _getch();
+    system("cls");
+    dibujar_conseguir_piedra();
+    Console::BackgroundColor = ConsoleColor::Black;
+    cursor(60, 49);
+    mostrarRanking(jugadores, numJugadores);
+
+    system("pause>0");
+    return 0;
+}
+
+
+
+void juego()
+{
+
+    dibujar_presentacion();
+    Console::BackgroundColor = ConsoleColor::Black;
+
+    _getch();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    escenario_instrucciones();
+
+    _getch();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(60, 50);
+    cout << "Futuro maestro Jedi, eres. El poder de la Fuerza en ti, grande es. ";
+    _getch();
+    cursor(60, 51);
+    cout << "Mucho aprender debes, pero sabiduria y valor en tu corazon veo. ";
+    _getch();
+    cursor(60, 52);
+    cout << "Paciencia y disciplina, tu guia seran. ";
+    cursor(60, 53);
+    cout << "Un camino dificil te espera, pero la luz en la oscuridad seras.";
+    _getch();
+    cursor(60, 54);
+    cout << "Bienvenido, joven aprendiz. La Fuerza contigo estara.";
+
+    _getch();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(60, 50);
+    cout << "Recuperar la gema del equilibrio, futuro maestro Jedi, debes. Fragmentada por mi";
+    _getch();
+    cursor(60, 51);
+    cout << "mano en batalla pasada, ahora dispersa esta. ";
+    _getch();
+    cursor(60, 53);
+    cout << "Codicia y maldad, hacia sus fragmentos, muchos atraen.";
+    _getch();
+    cursor(60, 55);
+    cout << "Poder inmenso en manos equivocadas, traer podria gran oscuridad.";
+    
+
+    int op_ruta;
+
+    _getch();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_nivel1();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda2(120, 15);
+    dibujar_jangofett(20, 10);
+    dibujar_yoda(20, 40);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(60, 50);
+    cout << "Enfrentamiento feroz tuve, gema en disputa. Contra mi, fuerzas oscuras vinieron.";
+    _getch();
+    cursor(60, 51);
+    cout << "Último recurso, romper la gema fue. Asi, fragmentos al viento se llevaron.";
+    _getch();
+    cursor(60, 52);
+    cout << "Con cada fragmento perdido, equilibrio tambaleante quedo.";
+
+    _getch();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_nivel1();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda2(120, 15);
+    dibujar_jangofett(20, 10);
+    dibujar_jangofett2(20, 41);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(60, 50);
+    cout << "Dame esa gema!!";
+
+
+    _getch();
+    system("cls");
+    Console::BackgroundColor = ConsoleColor::Black;
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(60, 50);
+    cout << "Dificil sera tu mision, joven Jedi. Solamente en manos puras, esta gema debe";
+    cursor(60, 51);
+    cout << " descansar.";
+    _getch();
+    cursor(60, 52);
+    cout << "Cada fragmento, encontrar debes. Enfrentaras a aquellos que por poder ansian. ";
+    _getch();
+    cursor(60, 53);
+    cout << "Oscuros son sus corazones, nublados sus pensamientos. Con valentia y sabiduria,";
+    cursor(60, 54);
+    cout << "avanzaras.";
+    _getch();
+    cursor(60, 55);
+    cout << "Sin titubear, el sendero debes seguir. Sentir la Fuerza, en cada paso, debes. ";
+    cursor(60, 56);
+    cout << "Recuperarás los fragmentos, uno por uno. Restaurar el equilibrio, tu destino es. ";
+
+    _getch();
+    system("cls");
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(60, 50);
+    cout << "Dos rutas ante ti se abren. Ruta 1, el camino de los porcentajes es, donde calculo";
+    cursor(60, 51);
+    cout << "y precision necesitas. ";
+    _getch();
+    cursor(60, 52);
+    cout << " Ruta 2, la senda de los numeros positivos y negativos, donde claridad";
+    cursor(60, 53);
+    cout << " y exactitud buscas.";
+
+    _getch();
+    system("cls");
+    dibujar_tutorial();
+    dibujar_panel_de_control2(170, 0);
+    dibujar_yoda(20, 40);
+    dibujar_MC_tutorial(70, 10);
+
+    while (1)
+    {
+        op_ruta = ruta();
+        Console::Clear();
+
+        if (op_ruta == 1)
+        {
+            funcionalidad_porcentaje();
+            break;
+        }
+        else if (op_ruta == 2)
+        {
+            funcionalidad_numero();
+            break;
+        }
+    }
+}
+
+

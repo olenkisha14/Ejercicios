@@ -1,0 +1,148 @@
+#pragma once
+
+#include "iostream"
+
+using namespace System;
+using namespace std;
+
+
+
+const int WIDTH = 250;
+const int HEIGHT = 45;
+
+
+void ventana()
+{
+    Console::SetWindowSize(WIDTH, HEIGHT);
+    Console::CursorVisible = false;
+}
+void fondo_blanco()
+{
+    Console::BackgroundColor = ConsoleColor::White;
+}
+void cursor(int x, int y) {
+    Console::SetCursorPosition(x, y);
+  }
+
+
+
+bool verificar_cantidad(float oro, float cobre, float plata) {
+    return oro == 60 && cobre == 16 && plata == 4; // 80 * 0.75, 80 * 0.20, 80 * 0.05
+}
+
+
+/*
+Ejemplo obtenido de:
+//https://gist.github.com/Alfonzzoj/db207b89d56f24d9d0b17ff93e091be8
+*/
+
+
+void FontColor(int R, int G, int B)
+{
+    //R es un valor entre 0 y 255
+    //G es un valor entre 0 y 255
+    //B es un valor entre 0 y 255
+    //tabla de colores: https://htmlcolorcodes.com/es/tabla-de-colores/
+
+    cout << "\x1B[38;2;" << R << ";" << G << ";" << B << "m";
+}
+
+void BackColor(int R, int G, int B)
+{
+    //R es un valor entre 0 y 255
+    //G es un valor entre 0 y 255
+    //B es un valor entre 0 y 255
+    //tabla de colores: https://htmlcolorcodes.com/es/tabla-de-colores/
+
+    cout << "\x1B[48;2;" << R << ";" << G << ";" << B << "m";
+}
+
+
+void BgColor()
+{
+    Console::BackgroundColor = ConsoleColor::White;
+
+}
+
+
+void disminuir_vida(int* vidas) {
+    if (*vidas > 0) 
+    {
+        (*vidas)--;
+
+    }
+}
+
+struct Jugador {
+    string nombre;
+    int puntos;
+};
+
+//NAVES
+struct BalaJugador
+{
+    int x, y, dy;
+
+    BalaJugador(int x, int y, int dy) : x(x), y(y), dy(dy) {}
+
+    void dibujar_bala()
+    {
+        Console::BackgroundColor = ConsoleColor::Black;
+        Console::ForegroundColor = ConsoleColor::Blue;
+        cursor(x, y); cout << char(30);
+    }
+};
+
+
+bool colision(int x1, int y1, int x2, int y2, int ancho, int alto) {
+    return (x1 < x2 + ancho &&
+        x1 + ancho > x2 &&
+        y1 < y2 + alto &&
+        y1 + alto > y2);
+}
+
+void disminuir_salud_jugador(int* salud_jugador)
+{
+    if (*salud_jugador > 0)
+    {
+        (*salud_jugador)--;
+    }
+}
+void disminuir_salud_enemigo(int* salud_enemigo)
+{
+    if (*salud_enemigo > 0)
+    {
+        (*salud_enemigo)--;
+    }
+}
+
+void nombres_creditos()
+{
+    Console::ForegroundColor = ConsoleColor::Black;
+    Console::BackgroundColor = ConsoleColor::White;
+    cursor(85, 25);
+    cout << "1.Olenka Priscilla Del Aguila Del Aguila";
+    cursor(85, 26);
+    cout << "2.Rose Almendra Vergaray Calderon";
+    cursor(85, 27);
+    cout << "3.Angela Milagros Espinoza Cruz";
+}
+
+int ruta()
+{
+    int op;
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(60, 50);
+    cout << "ELIGE TU RUTA:";
+    cursor(60, 51);
+    cout << "********";
+    cursor(60, 52);
+    cout << "1. RUTA 1: PORCENTAJE";
+    cursor(60, 53);
+    cout << "2. RUTA 2: NUMEROS POSITIVOS Y NEGATIVOS";
+    cursor(60, 54);
+    cout << "Ingrese un numero (1 O 2): ";
+    cin >> op;
+    return op;
+}

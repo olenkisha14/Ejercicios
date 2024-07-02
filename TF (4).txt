@@ -1,0 +1,750 @@
+#pragma once
+
+void dibujar_vidas2(int vidas)
+{
+    if (vidas == 0)
+    {
+        dibujar_vida0(173, 4);
+    }
+    if (vidas == 1)
+     {
+         dibujar_vida1(173, 4);
+     }
+     else if (vidas == 2)
+     {
+         dibujar_vida2(173, 4);
+     }
+     else if (vidas == 3)
+     {
+         dibujar_vida3(173, 4);
+     }
+     else if (vidas == 4)
+     {
+         dibujar_vida4(173, 4);
+     }
+     else if (vidas == 5)
+     {
+         dibujar_vida5(173, 4);
+     }
+}
+
+int funcionalidad_combustible2()
+{
+    Console::BackgroundColor = ConsoleColor::Black;
+    int vidas = 5;
+    system("cls"); // Limpiar pantalla al inicio
+
+
+    dibujar_combustible_nivelII();
+    dibujar_luke(19, 41);
+    dibujar_panel_de_control(170, 0);
+    dibujar_vidas2(vidas);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(178, 25);
+    cout << "LUNA BOCOSA DE ENDOR" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    1                    2    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "LUKE SKYWALKER" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     1                    2    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: SI" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: PENDIENTE" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+    _getch();
+    while (vidas > 0) {
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 50);
+        cout << "Hola, futuro Jedi. Soy Luke Skywalker. Ahora, para poder llegar al siguiente mundo,";
+        cursor(60, 51);
+        cout << "tenemos que revisar el abastecimiento de agua.";
+        _getch();
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 53);
+        cout << "En primer lugar, debemos de tener en cuenta que una persona necesita 100L de agua por dia";
+        cursor(60, 54);
+        cout << "para sus necesidades basicas.";
+        _getch();
+        dibujar_nivel2_100(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(40, 30);
+        cout << "1";
+        cursor(39, 31);
+        cout << "100L";
+        cursor(60, 56);
+        cout << "En el primer galon, podemos ver que su maxima capacidad de almacenamiento es 100L, por lo que";
+        cursor(60, 57);
+        cout << "esa catidad representara el 100%";
+        _getch();
+        dibujar_nivel2_50(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 59);
+        cout << "Si sabemos que el segundo galon contiene 50L de agua, Cuanto porciento del tanque esta lleno?";
+        cursor(63, 30);
+        cout << "2";
+        cursor(62, 31);
+        cout << "50L";
+
+
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_regla_tres_simple(0, 0);
+        dibujar_luke(19, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas2(vidas);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+
+
+        cursor(63, 14);
+        cout << "1";
+        cursor(62, 15);
+        cout << "100L";
+        cursor(63, 30);
+        cout << "2";
+        cursor(62, 31);
+        cout << "50L";
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 50);
+        cout << "Para determinarlo emplearemos un procedimiento matematico llamado <REGLA DE TRES SIMPLES>.";
+        cursor(60, 52);
+        cout << "Lo que puedes visualizar es la representacion grafica del problema planteado.";
+        _getch();
+        dibujar_regla_cruz(71, 5);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 54);
+        cout << "Despues de realizar ese paso, multiplicamos  en cruz y despejamos la x.";
+        _getch();
+        dibujar_nivel2_cruz_parte2_50(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(77, 14);
+        cout << "2";
+        cursor(76, 15);
+        cout << "50L";
+        cursor(93, 30);
+        cout << "1";
+        cursor(92, 31);
+        cout << "100L";
+        cursor(60, 56);
+        cout << "Una vez depejada la x, desarrollamos la operacion.";
+
+        _getch();
+        dibujar_nivel2_op_ejer1_50(0, 0);
+        int ejer1;
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(172, 61);
+        cout << "*************TEORIA*************" << endl;
+        cursor(179, 63);
+        cout << "x = 50L x 100%" << endl;
+        cursor(179, 64);
+        cout << "    ----------" << endl;
+        cursor(179, 65);
+        cout << "      100L" << endl;
+        cursor(60, 58);
+        cout << "Cual seria el resultado? "; cin >> ejer1;
+        if (ejer1 == 50)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 58);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+        }
+        else
+        {
+            while (ejer1 != 50)
+            {
+                disminuir_vida(&vidas);
+                
+                dibujar_vidas2(vidas);
+                if (vidas == 0)
+                {
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas2(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 58);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> ejer1;
+
+            }
+            if (ejer1 == 50)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 58);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+            }
+        }
+
+
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_combustible_nivelII();
+        dibujar_luke(19, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas2(vidas);
+        dibujar_nivel2_50(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(40, 30);
+        cout << "1";
+        cursor(39, 31);
+        cout << "100L";
+        cursor(63, 30);
+        cout << "2";
+        cursor(62, 31);
+        cout << "50L";
+        cursor(60, 50);
+        cout << "MUY BIEN!!! Ahora seguiremos con el siguiente galon.";
+
+        _getch();
+        dibujar_nivel2_75(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(86, 30);
+        cout << "3";
+        cursor(85, 31);
+        cout << "75%";
+
+        _getch();
+        dibujar_nivel2_cruz_parte2_75(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(77, 14);
+        cout << "3";
+        cursor(76, 15);
+        cout << "75%";
+        cursor(93, 30);
+        cout << "1";
+        cursor(92, 31);
+        cout << "100L";
+        cursor(60, 52);
+        cout << "Para determinar cuantos litros de agua tiene aplicaremos el mismo procedimiento.";
+
+        _getch();
+        dibujar_nivel2_op_ejer1_75(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        int ejer2;
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(172, 61);
+        cout << "*************TEORIA*************" << endl;
+        cursor(179, 63);
+        cout << "x = 100L x 75%" << endl;
+        cursor(179, 64);
+        cout << "    ----------" << endl;
+        cursor(179, 65);
+        cout << "       100%" << endl;
+        cursor(60, 54);
+        cout << "Cual seria el resultado? "; cin >> ejer2;
+        if (ejer2 == 75)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 54);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar.";
+        }
+        else
+        {
+            while (ejer2 != 75)
+            {
+                disminuir_vida(&vidas);
+                dibujar_vidas2(vidas);
+                if (vidas == 0)
+                {
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas2(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 54);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> ejer2;
+            }
+            if (ejer2 == 75)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 54);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+            }
+        }
+
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_combustible_nivelII();
+        dibujar_luke(19, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas2(vidas); 
+        dibujar_nivel2_25(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(40, 30);
+        cout << "1";
+        cursor(39, 31);
+        cout << "100L";
+        cursor(63, 30);
+        cout << "2";
+        cursor(62, 31);
+        cout << "50L";
+        cursor(86, 30);
+        cout << "3";
+        cursor(85, 31);
+        cout << "75L";
+        cursor(109, 30);
+        cout << "4";
+        cursor(108, 31);
+        cout << "25L";
+        cursor(60, 50);
+        cout << "MUY BIEN!!! Ahora seguiremos con el siguiente galon.";
+
+        _getch();
+        dibujar_nivel2_op_ejer1_25(0, 0);
+        int ejer3;
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 52);
+        cout << "Segun lo aperendido en el anterior nivel, cual es el valor en %? "; cin >> ejer3;
+        if (ejer3 == 25)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 54);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar.";
+        }
+        else
+        {
+            while (ejer3 != 25)
+            {
+                disminuir_vida(&vidas);
+                dibujar_vidas2(vidas);
+                if (vidas == 0)
+                {
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas2(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 54);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> ejer3;
+            }
+            if (ejer3 == 25)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 54);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar.           ";
+            }
+        }
+
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_combustible_nivelII();
+        dibujar_luke(19, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas2(vidas);
+        dibujar_nivel2_90(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(40, 30);
+        cout << "1";
+        cursor(39, 31);
+        cout << "100L";
+        cursor(63, 30);
+        cout << "2";
+        cursor(62, 31);
+        cout << "50L";
+        cursor(86, 30);
+        cout << "3";
+        cursor(85, 31);
+        cout << "75L";
+        cursor(109, 30);
+        cout << "4";
+        cursor(108, 31);
+        cout << "25L";
+        cursor(132, 30);
+        cout << "5";
+        cursor(131, 31);
+        cout << "90%";
+        cursor(60, 50);
+        cout << "MUY BIEN!!! Ahora finalizaremos con el ultimo galon.";
+
+        _getch();
+        dibujar_nivel2_op_ejer1_90(0, 0);
+        int ejer4;
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(172, 61);
+        cout << "*************TEORIA*************" << endl;
+        cursor(179, 63);
+        cout << "x = 25 x 90%" << endl;
+        cursor(179, 64);
+        cout << "    ----------" << endl;
+        cursor(179, 65);
+        cout << "       25L" << endl;
+        cursor(60, 52);
+        cout << "Con todo lo aprendido, cual es el valor en %? "; cin >> ejer4;
+        if (ejer4 == 90)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 52);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+        }
+        else
+        {
+            while (ejer4 != 90)
+            {
+                disminuir_vida(&vidas);
+                dibujar_vidas2(vidas);
+                if (vidas == 0)
+                {
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas2(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 52);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> ejer4;
+
+            }
+            if (ejer4 == 90)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 54);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+            }
+        }
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_combustible_nivelII();
+        dibujar_luke(19, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas2(vidas);
+        dibujar_nivel2_90(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(40, 30);
+        cout << "1";
+        cursor(39, 31);
+        cout << "100L";
+        cursor(63, 30);
+        cout << "2";
+        cursor(62, 31);
+        cout << "50L";
+        cursor(86, 30);
+        cout << "3";
+        cursor(85, 31);
+        cout << "75L";
+        cursor(109, 30);
+        cout << "4";
+        cursor(108, 31);
+        cout << "25L";
+        cursor(132, 30);
+        cout << "5";
+        cursor(131, 31);
+        cout << "90%";
+        cursor(60, 50);
+        cout << "Muy bien hecho, futuro Jedi! Ahora que ya verificamos todo, podemos ingresar al";
+        cursor(60, 51);
+        cout << "nuevo mundo llamado <LUNA BOCOSA DE ENDOR>.";
+
+        _getch();
+        system("cls");
+        Console::BackgroundColor = ConsoleColor::Black;
+        dibujar_combustible_nivelII();
+        dibujar_scoutrooper(19, 43);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas2(vidas);
+        dibujar_nivel2_90(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(178, 25);
+        cout << "LUNA BOCOSA DE ENDOR" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    1                    2    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "LUKE SKYWALKER" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     1                    2    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: SI" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(40, 30);
+        cout << "1";
+        cursor(39, 31);
+        cout << "100L";
+        cursor(63, 30);
+        cout << "2";
+        cursor(62, 31);
+        cout << "50L";
+        cursor(86, 30);
+        cout << "3";
+        cursor(85, 31);
+        cout << "75L";
+        cursor(109, 30);
+        cout << "4";
+        cursor(108, 31);
+        cout << "25L";
+        cursor(132, 30);
+        cout << "5";
+        cursor(131, 31);
+        cout << "90%";
+        cursor(60, 50);
+        cout << "Alto ahi!No des un paso ms. Estás bajo la jurisdicción del Imperio. Identifícate";
+        cursor(60, 51);
+        cout << "de inmediato y sigue mis ordenes, o enfrentate a las consecuencias.";
+
+
+        system("pause>0");
+
+
+
+        break;
+    }
+
+    return 0;
+}

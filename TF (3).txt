@@ -1,0 +1,344 @@
+#pragma once
+
+void dibujar_vidas1(int vidas)
+{
+    if (vidas == 0)
+    {
+        dibujar_vida0(173, 4);
+    }
+    if (vidas == 1)
+    {
+        dibujar_vida1(173, 4);
+    }
+    else if (vidas == 2)
+    {
+        dibujar_vida2(173, 4);
+    }
+    else if (vidas == 3)
+    {
+        dibujar_vida3(173, 4);
+    }
+    else if (vidas == 4)
+    {
+        dibujar_vida4(173, 4);
+    }
+    else if (vidas == 5)
+    {
+        dibujar_vida5(173, 4);
+    }
+}
+
+
+
+int funcionalidad_combustible()
+{
+    Console::BackgroundColor = ConsoleColor::Black;
+    int vidas = 5;
+  
+    system("cls"); // Limpiar pantalla al inicio
+    dibujar_combustible_nivelI();
+    dibujar_obiwan(18, 41);
+    dibujar_panel_de_control(170, 0);
+    dibujar_vidas1(vidas);
+    Console::BackgroundColor = ConsoleColor::White;
+    Console::ForegroundColor = ConsoleColor::Black;
+    cursor(184, 2);
+    cout << "*VIDAS*" << endl;
+    cursor(172, 23);
+    cout << "*************DESTINO************" << endl;
+    cursor(182, 25);
+    cout << "TATOONIE" << endl;
+    cursor(172, 30);
+    cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+    cursor(172, 32);
+    cout << " OBTENIDOS           FALTANTES" << endl;
+    cursor(172, 33);
+    cout << "    0                    3    " << endl;
+    cursor(172, 38);
+    cout << "**********TUTOR ACTUAL**********" << endl;
+    cursor(181, 40);
+    cout << "OBI-WAN KENOBI" << endl;
+    cursor(172, 45);
+    cout << "************ENEMIGOS************" << endl;
+    cursor(172, 47);
+    cout << " DERROTADOS           FALTANTES" << endl;
+    cursor(172, 48);
+    cout << "     0                    3    " << endl;
+    cursor(172, 53);
+    cout << "*******NIVELES SUPERADOS********" << endl;
+    cursor(177, 55);
+    cout << "-NIVEL I: PENDIENTE" << endl;
+    cursor(177, 56);
+    cout << "-NIVEL II: PENDIENTE" << endl;
+    cursor(177, 57);
+    cout << "-NIVEL III: PENDIENTE" << endl;
+    _getch();
+
+    while (vidas > 0)
+    {
+
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 50);
+        cout << "Hola, futuro Jedi. Soy Obi-Wan Kenobi. Me alegra al fin poder conocerte. Lo que estas";
+        cursor(60, 51);
+        cout << " visualizando es el almacenamiento de combustible de la nave.";
+        _getch();
+        dibujar_nivel1_100(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(49, 30);
+        cout << "1";
+        cursor(48, 31);
+        cout << "100%";
+        cursor(60, 53);
+        cout << "Cada uno de los galones es capaz de contener 100L de combustible. Es por ello que el";
+        cursor(60, 54);
+        cout << "primer galon, al contener 100L, esta lleno en un 100% .";
+
+        _getch();
+        dibujar_nivel1_50(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(73, 30);
+        cout << "2";
+        cursor(72, 31);
+        cout << "50%";
+        cursor(60, 56);
+        cout << "El segundo galon esta lleno hasta la mitad; es decir, solo esta un 50% lleno.";
+        
+        _getch();
+        dibujar_nivel1_25(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(96, 30);
+        cout << "3";
+        cursor(95, 31);
+        cout << "25%";
+        cursor(60, 58);
+        cout << "En el caso del tercer galon, al contener menos de la mitad de su capacidad, podemos";
+        cursor(60, 59);
+        cout << "decir que esta lleno en un 25%.";
+        
+
+        _getch();
+        system("cls"); // Limpiar pantalla al inicio
+        dibujar_combustible_nivelI();
+        dibujar_obiwan(18, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas1(vidas);
+        dibujar_nivel1_75(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(49, 30);
+        cout << "1";
+        cursor(48, 31);
+        cout << "100%";
+        cursor(73, 30);
+        cout << "2";
+        cursor(72, 31);
+        cout << "50%";
+        cursor(96, 30);
+        cout << "3";
+        cursor(95, 31);
+        cout << "25%";
+        cursor(119, 30);
+        cout << "?";
+        cursor(60, 50);
+        cout << "Teniendo en cuenta lo anterior, que tan lleno esta el galon 4?";
+
+        _getch();
+        int ejer1;
+        dibujar_nivel1_op_ejer1_75(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(60, 52);
+        cout << "Escriba la respuesta correcta: "; cin >> ejer1;
+        if (ejer1 == 75)
+        {
+            Console::BackgroundColor = ConsoleColor::White;
+            Console::ForegroundColor = ConsoleColor::Black;
+            cursor(60, 52);
+            cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+        }
+        else
+        {
+            while (ejer1 != 75)
+            {
+                disminuir_vida(&vidas);
+
+                dibujar_vidas1(vidas);
+                if (vidas == 0)
+                {
+                    Console::BackgroundColor = ConsoleColor::White;
+                    Console::ForegroundColor = ConsoleColor::Black;
+                    cursor(179, 19);
+                    cout << "Te quedan " << vidas << " vidas." << endl;
+                    cursor(175, 20);
+                    cout << "Has perdido todas tus vidas." << endl;
+                    cursor(175, 21);
+                    cout << "Juego terminado." << endl;
+                    dibujar_vidas1(vidas);
+                    return 0;
+                }
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(179, 19);
+                cout << "Te quedan " << vidas << " vidas." << endl;
+                cursor(60, 52);
+                cout << "RESPUESTA INCORRECTA! Cual seria el resultado?: "; cin >> ejer1;
+
+            }
+            if (ejer1 == 75)
+            {
+                Console::BackgroundColor = ConsoleColor::White;
+                Console::ForegroundColor = ConsoleColor::Black;
+                cursor(60, 52);
+                cout << "RESPUESTA CORRECTA!!! ..... Toque una tecla para continuar";
+            }
+        }
+
+
+        _getch();
+        system("cls"); // Limpiar pantalla al inicio
+        dibujar_combustible_nivelI();
+        dibujar_obiwan(18, 41);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas1(vidas);
+        dibujar_nivel1_75(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(49, 30);
+        cout << "1";
+        cursor(48, 31);
+        cout << "100%";
+        cursor(73, 30);
+        cout << "2";
+        cursor(72, 31);
+        cout << "50%";
+        cursor(96, 30);
+        cout << "3";
+        cursor(95, 31);
+        cout << "25%";
+        cursor(119, 30);
+        cout << "4";
+        cursor(118, 31);
+        cout << "75%";
+        cursor(60, 50);
+        cout << "Lo hiciste muy bien! Con el abastecimiento de combustible revisado, ahora";
+        cursor(60, 51);
+        cout << "podemos partir al mundo <TATOONIE>";
+
+
+        _getch();
+        system("cls"); // Limpiar pantalla al inicio
+        dibujar_combustible_nivelI();
+        dibujar_sandtrooper(18, 43);
+        dibujar_panel_de_control(170, 0);
+        dibujar_vidas1(vidas);
+        dibujar_nivel1_75(0, 0);
+        Console::BackgroundColor = ConsoleColor::White;
+        Console::ForegroundColor = ConsoleColor::Black;
+        cursor(184, 2);
+        cout << "*VIDAS*" << endl;
+        cursor(172, 23);
+        cout << "*************DESTINO************" << endl;
+        cursor(182, 25);
+        cout << "TATOONIE" << endl;
+        cursor(172, 30);
+        cout << "****FRAGMENTOS RECOLECTADOS*****" << endl;
+        cursor(172, 32);
+        cout << " OBTENIDOS           FALTANTES" << endl;
+        cursor(172, 33);
+        cout << "    0                    3    " << endl;
+        cursor(172, 38);
+        cout << "**********TUTOR ACTUAL**********" << endl;
+        cursor(181, 40);
+        cout << "OBI-WAN KENOBI" << endl;
+        cursor(172, 45);
+        cout << "************ENEMIGOS************" << endl;
+        cursor(172, 47);
+        cout << " DERROTADOS           FALTANTES" << endl;
+        cursor(172, 48);
+        cout << "     0                    3    " << endl;
+        cursor(172, 53);
+        cout << "*******NIVELES SUPERADOS********" << endl;
+        cursor(177, 55);
+        cout << "-NIVEL I: PENDIENTE" << endl;
+        cursor(177, 56);
+        cout << "-NIVEL II: PENDIENTE" << endl;
+        cursor(177, 57);
+        cout << "-NIVEL III: PENDIENTE" << endl;
+        cursor(60, 50);
+        cout << "Detengase inmediatamente! Está entrando en una zona restringida. Deje caer sus armas";
+        cursor(60, 51);
+        cout << "muestre sus identificaciones de inmediato, o nos veremos obligados a tomar ";
+        cursor(60, 52);
+        cout << "medidas drásticas.";
+
+        system("pause>0");
+        break;
+    }
+    
+    return 0;
+}
